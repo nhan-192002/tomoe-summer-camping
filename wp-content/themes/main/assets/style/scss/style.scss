@@ -1,0 +1,227 @@
+$black: #383838;
+$white: #FFF;
+$gray: #494343;
+$greyish: #979797;
+$darkBlack: #000;
+$grayMedium: #757575;
+$blue: #3f99bb;
+$green: rgb(77, 91, 42);
+
+$fs_text_menu: 20px;
+$fs_title_large: 80px;
+$fs_lh_title_large: 80px;
+$fs_title_medium: 34px;
+$fs_lh_title_medium: 44px;
+$fs_title_small: 24px;
+$fs_lh_title_small: 32px;
+$fs_text: 14px;
+$fs_lh_text: 20px;
+$fs_text_medium: 18px;
+$fs_lh_text_medium: 28px;
+$fs_text_up_medium: 30px;
+$fs_lh_text_up_medium: 30px;
+
+body{
+}
+img{
+  width: 100%;
+}
+ul{
+  list-style-type: none;
+  padding: 0;
+}
+a{
+  text-decoration: none;
+  font-family: "A";
+}
+a:hover{
+  text-decoration: none;
+}
+
+.header-mobile{
+  display: none;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 11;
+}
+
+// Navigation
+.navigation{
+  position: fixed;
+  width: 100%;
+  z-index: 11;
+  background-color: $green;
+  transition: transform 0.3s ease-in-out;
+  .navigation-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    .navigation-left{
+      .logo{
+        a{
+          img{
+            width: 100px;
+            height: 80px;
+          }
+        }
+      }
+    }
+    .navigation-right{
+      .navigation-list{
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        margin: 0;
+        li{
+          padding-left: 100px;
+          a{
+            font-size: $fs_text_menu;
+            color: $white;
+            font-size: 18px;
+            font-weight: 700;
+            text-transform: uppercase;
+            white-space: nowrap;
+          }
+          &:first-child{
+            margin-left: 0;
+          }
+          &:last-child{
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+}
+.navigation.hidden{
+  transform: translateY(-100%);
+}
+
+// Custom Banner
+.banner {
+  position: relative;
+  width: 100%;
+  height: 800px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 100px;
+  top: 80px;
+  .banner-wrap {
+  }
+}
+
+// Camping Info
+.camping-info{
+  margin-bottom: 100px;
+  .camping-info-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+  }
+  .camping-info-right, .camping-info-left{
+    width: 48%;
+  }
+  .camping-info-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    align-items: end;
+    padding-left: 10px;
+    h5{
+      font-weight: 400;
+      color: $green;
+      text-transform: uppercase;
+      letter-spacing: 6px;
+      font-size: 18px;
+    }
+    h1{
+      font-size: 64px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: $green;
+      letter-spacing: 6px;
+    }
+  }
+  .camping-info-right{
+    .camping-info-description{
+      p{
+        color: $green;
+        font-size: 20px;
+        line-height: 1.4;
+        text-align: justify;
+        letter-spacing: 3px;
+        padding-bottom: 10px;
+      }
+    }
+  }
+}
+
+// Thanks
+.thanks{
+  .thanks-img{
+    position: relative;
+    bottom: 38px;
+    width: 100%;
+    height: 800px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    .thanks-content{
+      text-align: center;
+      color: $green;
+      max-width: 800px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      h5{
+        text-transform: uppercase;
+        margin-bottom: 30px;
+        font-weight: 400;
+        font-size: 18px;
+      }
+      h1{
+        text-transform: uppercase;
+        margin-bottom: 30px;
+        font-weight: 700;
+        font-size: 40px;
+      }
+      p{
+        font-size: 18px;
+        line-height: 1.4;
+        letter-spacing: 3px;
+      }
+    }
+  }
+}
+
+// Footer
+.footer-custom{
+  .footer-copyright{
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    background-color: $green;
+    width: 100%;
+    text-align: center;
+    h4{
+      margin: 0;
+      padding: 10px 0;
+      color: $white;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 16px;
+    }
+  }
+}

@@ -45,7 +45,7 @@
             <div class="navigation-center-mobile">
                 <div class="logo-mobile">
                     <a href="#">
-                        <img src="/wp-content/themes/main/assets/images/global/logo-teh-v3.svg" alt="Tomoe English House Logo">
+                        <img src="<?php echo theme_uri()?>/assets/images/global/logo-teh-v3.svg" alt="Tomoe English House Logo">
                     </a>
                 </div>
             </div>

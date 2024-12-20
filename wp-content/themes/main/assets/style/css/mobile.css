@@ -156,4 +156,45 @@
     font-size: 32px;
     letter-spacing: 3px;
   }
+  .camping-memories .camping-memories-top h5 {
+    font-size: 14px;
+    letter-spacing: 3px;
+  }
+  .camping-memories .camping-memories-top h1 {
+    font-size: 32px;
+    letter-spacing: 3px;
+  }
+  .camping-memories .camping-memories-center, .camping-memories .camping-memories-bot {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .camping-memories .camping-memories-center .left, .camping-memories .camping-memories-center .right, .camping-memories .camping-memories-bot .left, .camping-memories .camping-memories-bot .right {
+    width: 100%;
+  }
+  .background-scroll {
+    min-height: 210px;
+  }
+  .promo-section .promo-title h1 {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+  }
+  .promo-section .promo-title h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin: 10px 0 0;
+  }
+  .thanks .thanks-img .thanks-content h5 {
+    font-size: 16px;
+    letter-spacing: 3px;
+  }
+  .thanks .thanks-img .thanks-content h1 {
+    font-size: 48px;
+    letter-spacing: 3px;
+  }
 }

@@ -203,7 +203,65 @@ $fs_lh_text_up_medium: 30px;
       }
     }
   }
+
+  // Camping memories
+  .camping-memories{
+    .camping-memories-top{
+      h5{
+        font-size: 14px;
+        letter-spacing: 3px;
+      }
+      h1{
+        font-size: 32px;
+        letter-spacing: 3px;
+      }
+    }
+    .camping-memories-center , .camping-memories-bot{
+      flex-direction: column;
+      align-items: center;
+      .left, .right{
+        width: 100%;
+      }
+
+    }
+  }
+
+  // Promo
+  .background-scroll {
+    min-height: 210px;
+  }
+  .promo-section{
+    .promo-title{
+      h1 {
+        font-size: 24px;
+        font-weight: 700;
+        margin: 0;
+      }
+      h2 {
+        font-size: 36px;
+        font-weight: 700;
+        margin: 10px 0 0;
+      }
+    }
+  }
+
+  // Thanks
+  .thanks{
+    .thanks-img{
+      .thanks-content{
+        h5{
+          font-size: 16px;
+          letter-spacing: 3px;
+        }
+        h1{
+          font-size: 48px;
+          letter-spacing: 3px;
+        }
+      }
+    }
+  }
 }
+
 @media (max-width: 576px) {
 
 }

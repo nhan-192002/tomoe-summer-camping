@@ -28,16 +28,32 @@ $(document).ready(function() {
         opacityBody.removeClass('overlay')
     });
 
-    $(window).on("scroll", function () {
-        const currentScrollY = $(window).scrollTop();
+    const $imageList = $(".camping-image-list");
 
-        if (currentScrollY > headerHeight) {
-            navigation.addClass("hidden");
-        } else {
-            navigation.removeClass("hidden");
+    let scrollAmount = 0;
+    const scrollSpeed = 1; // Pixels per frame
+    let scrollDirection = 1; // 1 for right, -1 for left
+
+    function autoMoveImages() {
+        // Calculate the max scrollable width
+        const maxScroll = $imageList[0].scrollWidth - $(window).width();
+
+        // Update scroll position
+        scrollAmount += scrollSpeed * scrollDirection;
+
+        // Reverse direction when reaching boundaries
+        if (scrollAmount >= maxScroll || scrollAmount <= 0) {
+            scrollDirection *= -1; // Change direction
         }
-        headerHeight = currentScrollY;
-    });
+
+        // Apply the scroll translation
+        $imageList.css("transform", `translateX(-${scrollAmount}px)`);
+
+        requestAnimationFrame(autoMoveImages); // Keep animating
+    }
+
+    autoMoveImages(); // Start animation
 
 });
+
 

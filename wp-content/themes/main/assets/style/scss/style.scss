@@ -113,20 +113,18 @@ a:hover{
   overflow: hidden;
   background-size: cover;
   background-position: center;
-  margin-bottom: 100px;
-  top: 80px;
   .banner-wrap {
   }
 }
 
 // Camping Info
 .camping-info{
-  margin-bottom: 100px;
+  padding: 100px 0;
   .camping-info-content{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 60px;
+    gap: 80px;
   }
   .camping-info-right, .camping-info-left{
     width: 48%;

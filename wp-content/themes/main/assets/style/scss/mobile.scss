@@ -50,8 +50,29 @@ $fs_lh_text_up_medium: 30px;
 }
 
 @media (max-width: 992px) {
-
+  // Camping info
+  .camping-info{
+    .camping-info-content{
+      flex-direction: column;
+      gap: 20px;
+      .camping-info-left, .camping-info-right{
+        width: 100%;
+      }
+      .camping-info-left{
+        align-items: center;
+        h5{
+          font-size: 16px;
+          letter-spacing: 3px;
+        }
+        h1{
+          font-size: 48px;
+          letter-spacing: 3px;
+        }
+      }
+    }
+  }
 }
+
 @media (max-width: 768px) {
   .navigation{
     display: none;
@@ -159,6 +180,28 @@ $fs_lh_text_up_medium: 30px;
   }
   .header-mobile.hidden{
     transform: translateY(-100%);
+  }
+
+  // Camping info
+  .camping-info{
+    .camping-info-content{
+      flex-direction: column;
+      gap: 20px;
+      .camping-info-left, .camping-info-right{
+        width: 100%;
+      }
+      .camping-info-left{
+        align-items: center;
+        h5{
+          font-size: 14px;
+          letter-spacing: 3px;
+        }
+        h1{
+          font-size: 32px;
+          letter-spacing: 3px;
+        }
+      }
+    }
   }
 }
 @media (max-width: 576px) {

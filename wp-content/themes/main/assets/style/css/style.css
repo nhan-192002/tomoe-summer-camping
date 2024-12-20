@@ -98,11 +98,9 @@ a:hover {
   overflow: hidden;
   background-size: cover;
   background-position: center;
-  margin-bottom: 100px;
-  top: 80px;
 }
 .camping-info {
-  margin-bottom: 100px;
+  padding: 100px 0;
 }
 .camping-info .camping-info-content {
   display: -webkit-box;
@@ -114,7 +112,7 @@ a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 60px;
+  gap: 80px;
 }
 .camping-info .camping-info-right, .camping-info .camping-info-left {
   width: 48%;

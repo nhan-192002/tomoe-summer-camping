@@ -1,3 +1,6 @@
+<?php
+    $logo = get_field('logo', get_the_ID());
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,7 +24,7 @@
             <div class="navigation-left">
                 <div class="logo">
                     <a href="#">
-                        <img src="<?php echo theme_uri()?>/assets/images/global/logo-teh-v3.svg" alt="Tomoe English House Logo">
+                        <img src="<?php echo $logo;?>" alt="Tomoe English House Logo">
                     </a>
                 </div>
             </div>
@@ -46,7 +49,7 @@
             <div class="navigation-center-mobile">
                 <div class="logo-mobile">
                     <a href="#">
-                        <img src="<?php echo theme_uri()?>/assets/images/global/logo-teh-v3.svg" alt="Tomoe English House Logo">
+                        <img src="<?php echo $logo;?>" alt="Tomoe English House Logo">
                     </a>
                 </div>
             </div>

@@ -321,14 +321,16 @@ a:hover{
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
     z-index: 2;
     h1 {
-      font-size: 36px;
-      font-weight: 700;
-      margin: 0;
-    }
-    h2 {
       font-size: 48px;
       font-weight: 700;
+      margin: 0;
+      text-transform: uppercase;
+    }
+    h2 {
+      font-size: 64px;
+      font-weight: 700;
       margin: 10px 0 0;
+      text-transform: uppercase;
     }
   }
 }
@@ -395,7 +397,7 @@ a:hover{
         .item-content-center{
           margin-bottom: 30px;
           margin-left: 15px;
-          li{
+          p{
             font-size: 20px;
             color: $white;
             font-weight: 400;

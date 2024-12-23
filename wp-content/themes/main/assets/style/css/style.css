@@ -323,14 +323,16 @@ a:hover {
   z-index: 2;
 }
 .promo-section .promo-title h1 {
-  font-size: 36px;
-  font-weight: 700;
-  margin: 0;
-}
-.promo-section .promo-title h2 {
   font-size: 48px;
   font-weight: 700;
+  margin: 0;
+  text-transform: uppercase;
+}
+.promo-section .promo-title h2 {
+  font-size: 64px;
+  font-weight: 700;
   margin: 10px 0 0;
+  text-transform: uppercase;
 }
 
 .camping-current {
@@ -399,7 +401,7 @@ a:hover {
   margin-bottom: 30px;
   margin-left: 15px;
 }
-.camping-current .camping-current-list .camping-current-item .item-content .item-content-center li {
+.camping-current .camping-current-list .camping-current-item .item-content .item-content-center p {
   font-size: 20px;
   color: #FFF;
   font-weight: 400;

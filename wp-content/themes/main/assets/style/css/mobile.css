@@ -253,6 +253,9 @@
   .camping-current .camping-current-list .camping-current-item .item-content .item-content-top h2 {
     font-size: 24px;
   }
+  .camping-current .camping-current-list .camping-current-item .item-content .item-content-center p {
+    font-size: 16px;
+  }
   .camping-flavor .camping-flavor-title h5 {
     font-size: 14px;
   }

@@ -1,8 +1,18 @@
+<?php
+    $camping_banner = get_field('camping_banner', get_the_ID());
+    $camping_info = get_field('camping_information', get_the_ID());
+    $camping_gallery = get_field('camping_gallery', get_the_ID());
+    $camping_memories = get_field('camping_memories', get_the_ID());
+    $camping_current = get_field('camping_current', get_the_ID());
+    $promo_top = get_field('promo_top', get_the_ID());
+    $promo_bot = get_field('promo_bot', get_the_ID());
+?>
+
 <?php get_header();?>
 
-    <section class="banner" style="background-image: url('<?php echo theme_uri()?>/assets/images/banner.jpg');">
+    <section class="banner" style="background-image: url('<?php echo $camping_banner['banner_image'];?>');">
         <div class="container banner-wrap" data-aos="fade-down" data-aos-duration="2000">
-            <img src="<?php echo theme_uri()?>/assets/images/animation-banner.png">
+            <img src="<?php echo $camping_banner['animated_banner'];?>">
         </div>
     </section>
 
@@ -10,16 +20,12 @@
         <div class="container">
             <div class="camping-info-content">
                 <div class="camping-info-left" data-aos="fade-right">
-                    <h5>Trại hè 2024</h5>
-                    <h1>Giới thiệu</h1>
+                    <h5><?php echo $camping_info['subtitle'];?></h5>
+                    <h1><?php echo $camping_info['title'];?></h1>
                 </div>
                 <div class="camping-info-right">
                     <div class="camping-info-description">
-                        <p>Dịp Trăng rằm năm nay, Cộng chở bạn về tuổi thơ những ngày thương nhớ cùng Hộp Bánh Trung Thu, mở ra là cả gia tài nhỏ - đầy ắp những viên bi ve lấp lánh.</p>
-
-                        <p>Những hồi ức sống động, thuần khiết, đầy màu sắc, lăn tròn nhẹ nhàng như thước phim cuộn lại.</p>
-
-                        <p>Mùa đoàn viên này, Cộng mong được đồng hành cùng bạn và gia đình, Chạm về một thời thơ ấu Trong veo, Chạm từ hiện tại về quá khứ, Chạm để thêm gắn kết, Chạm để được yêu thương.</p>
+                        <p><?php echo $camping_info['description'];?></p>
                     </div>
                 </div>
             </div>
@@ -29,12 +35,11 @@
     <section class="camping-gallery">
         <div class="camping-horizontal-gallery">
             <div class="camping-image-list">
-                <img src="<?php echo theme_uri()?>/assets/images/gallery-01.jpg" alt="Image 1">
-                <img src="<?php echo theme_uri()?>/assets/images/gallery-02.jpg" alt="Image 1">
-                <img src="<?php echo theme_uri()?>/assets/images/gallery-03.jpg" alt="Image 1">
-                <img src="<?php echo theme_uri()?>/assets/images/gallery-03.jpg" alt="Image 1">
-                <img src="<?php echo theme_uri()?>/assets/images/gallery-03.jpg" alt="Image 1">
-                <img src="<?php echo theme_uri()?>/assets/images/gallery-03.jpg" alt="Image 1">
+                <?php if ($camping_gallery):
+                    foreach ($camping_gallery as $item): ?>
+                        <img src="<?php echo $item['image'];?>" alt="Image 1">
+                    <?php endforeach;
+                endif;?>
             </div>
         </div>
     </section>
@@ -43,137 +48,115 @@
     <section class="camping-memories">
         <div class="container">
             <div class="camping-memories-top">
-                <h5>Trại hè 2024</h5>
-                <h1>bi ve - hồi ức tuổi thơ</h1>
-                <p>Ký ức tuổi thơ là những ngày hè nắng chang chang, lũ con nít chúng mình túm năm tụm ba sau trường,
-                    háo hức dõi theo những viên bi ve đủ màu, lấp lánh như những vì sao....
+                <h5><?php echo $camping_memories['camping_memories_title']['subtitle'];?></h5>
+                <h1><?php echo $camping_memories['camping_memories_title']['title'];?></h1>
+                <p>
+                    <?php echo $camping_memories['camping_memories_title']['description'];?>
                 </p>
             </div>
-            <div class="camping-memories-center">
-                <div class="left" data-aos="fade-right" data-aos-duration="2000">
-                    <img src="<?php echo theme_uri()?>/assets/images/memories-01.jpg">
-                </div>
-                <div class="right">
-                    <p>Ngày ấy, cứ chiều chiều sau khi tan học, đám trẻ lại kéo nhau ra khoảng sân rộng trong làng,
-                        tụ tập lập hội bắn bi. Đứa nào cũng có một sưu tập bi đủ loại, đủ kích cỡ, đủ sắc màu, như một
-                        kho báu quý giá mà không gì có thể đổi lấy được.
-                    </p>
-                    <img  class="image-position" src="<?php echo theme_uri()?>/assets/images/memories-04.png ">
-                </div>
-            </div>
-            <div class="camping-memories-bot">
-                <div class="left">
-                    <p>
-                        Được lấy cảm hứng từ trò bắn bi – trò chơi vui thú một thời tuổi thơ suốt những năm 7x, 8x, 9x,
-                        sản phẩm Bánh Trung thu 2024 của Cộng Cà Phê có thiết kế bao bì và hộp quà bi ve tặng kèm,
-                        chứa đựng muôn vàn kỷ niệm hồn nhiên thời thơ bé.
-                    </p>
-                    <br>
-                    <p>
-                        Hy vọng một chút quà tặng bi ve nhỏ xinh trong mỗi Hộp Bánh Trung Thu của Cộng sẽ mang lại
-                        cho bạn và gia đình những niềm vui trong trẻo, làm sống lại hồi ức tuổi thơ thân thương trong
-                        mỗi chúng ta.
-                    </p>
-                </div>
-                <div class="right" data-aos="fade-left" data-aos-duration="2000">
-                    <img src="<?php echo theme_uri()?>/assets/images/memories-03.jpg">
-                </div>
-            </div>
+            <?php if ($camping_memories['camping_memories_content']):
+                foreach ($camping_memories['camping_memories_content'] as $layout):
+                    switch ($layout['acf_fc_layout']):
+                        case 'content_top':?>
+                            <div class="camping-memories-center">
+                                <div class="left" data-aos="fade-right" data-aos-duration="2000">
+                                    <img src="<?php echo $layout['image_left'];?>">
+                                </div>
+                                <div class="right">
+                                    <p>
+                                        <?php echo $layout['text_right'];?>
+                                    </p>
+                                    <img class="image-position"
+                                         src="<?php echo $layout['image_right'];?>">
+                                </div>
+                            </div>
+                            <?php break;
+                        case 'content_bot':?>
+                            <div class="camping-memories-bot">
+                                <div class="left">
+                                    <p>
+                                        <?php echo $layout['text_left'];?>
+                                    </p>
+                                </div>
+                                <div class="right" data-aos="fade-left" data-aos-duration="2000">
+                                    <img src="<?php echo $layout['image_right'];?>">
+                                </div>
+                            </div>
+                            <?php break;?>
+                    <?php endswitch;?>
+                <?php endforeach;?>
+            <?php endif; ?>
         </div>
     </section>
 
-    <section class="promo-section background-scroll" style="background-image: url('<?php echo theme_uri()?>/assets/images/what-have.jpg');">
+    <section class="promo-section background-scroll" style="background-image: url('<?php echo $promo_top['promo_image'];?>');">
         <div class="promo-title">
-            <h1>TRẠI HÈ NĂM NAY</h1>
-            <h2>TOMOE CÓ GÌ?</h2>
+            <h1><?php echo $promo_top['promo_text']['text_1'];?></h1>
+            <h2><?php echo $promo_top['promo_text']['text_2'];?></h2>
         </div>
     </section>
 
     <section class="camping-current">
         <div class="container">
             <div class="camping-current-title">
-                <h5>Trại hè 2024</h5>
-                <h1>Trại hè năm nay có</h1>
+                <h5><?php echo $camping_current['camping_current_title']['subtitle'];?></h5>
+                <h1><?php echo $camping_current['camping_current_title']['title'];?></h1>
             </div>
             <div class="camping-current-list">
-                <div class="camping-current-item">
-                    <div class="item-image">
-                        <img src="<?php echo theme_uri()?>/assets/images/camping-current-1.jpg">
-                    </div>
-                    <div class="item-content">
-                        <div class="item-content-top">
-                            <h5>Trại hè 2024</h5>
-                            <h2>Hộp Trong veo</h2>
-                        </div>
-                        <div class="item-content-center">
-                            <ul>
-                                <li>06 Bánh Trung thu 125gr đủ vị</li>
-                                <li>01 Hộp quà tặng Bi ve + bộ dao gỗ</li>
-                                <li>Tặng kèm 01 túi đựng</li>
-                            </ul>
-                        </div>
-                        <div class="item-content-bot">
-                            <div class="register-btn">
-                                <a href="#">Đăng ký ngay</a>
-                            </div>
-                        </div>
-                        <div class="line">
-                            <b></b>
-                        </div>
-                    </div>
-                </div>
-                <div class="camping-current-item">
-                    <div class="item-content">
-                        <div class="item-content-top">
-                            <h5>Trại hè 2024</h5>
-                            <h2>Hộp Trong veo</h2>
-                        </div>
-                        <div class="item-content-center">
-                            <ul>
-                                <li>06 Bánh Trung thu 125gr đủ vị</li>
-                                <li>01 Hộp quà tặng Bi ve + bộ dao gỗ</li>
-                                <li>Tặng kèm 01 túi đựng</li>
-                            </ul>
-                        </div>
-                        <div class="item-content-bot">
-                            <div class="register-btn">
-                                <a href="#">Đăng ký ngay</a>
-                            </div>
-                        </div>
-                        <div class="line">
-                            <b></b>
-                        </div>
-                    </div>
-                    <div class="item-image">
-                        <img src="<?php echo theme_uri()?>/assets/images/camping-current-1.jpg">
-                    </div>
-                </div>
-                <div class="camping-current-item">
-                    <div class="item-image">
-                        <img src="<?php echo theme_uri()?>/assets/images/camping-current-1.jpg">
-                    </div>
-                    <div class="item-content">
-                        <div class="item-content-top">
-                            <h5>Trại hè 2024</h5>
-                            <h2>Hộp Trong veo</h2>
-                        </div>
-                        <div class="item-content-center">
-                            <ul>
-                                <li>06 Bánh Trung thu 125gr đủ vị</li>
-                                <li>01 Hộp quà tặng Bi ve + bộ dao gỗ</li>
-                                <li>Tặng kèm 01 túi đựng</li>
-                            </ul>
-                        </div>
-                        <div class="item-content-bot">
-                            <div class="register-btn">
-                                <a href="#">Đăng ký ngay</a>
-                            </div>
-                        </div>
-                        <div class="line">
-                            <b></b>
-                        </div>
-                    </div>
-                </div>
+                <?php if ($camping_current['camping_current_content']):
+                    foreach ($camping_current['camping_current_content'] as $layout):
+                        switch ($layout['acf_fc_layout']):
+                            case 'content_image_left':?>
+                                    <div class="camping-current-item">
+                                        <div class="item-image">
+                                            <img src="<?php echo $layout['image'];?>">
+                                        </div>
+                                        <div class="item-content">
+                                            <div class="item-content-top">
+                                                <h5><?php echo $layout['subtitle'];?></h5>
+                                                <h2><?php echo $layout['title'];?></h2>
+                                            </div>
+                                            <div class="item-content-center">
+                                                <p><?php echo $layout['text_content'];?></p>
+                                            </div>
+                                            <div class="item-content-bot">
+                                                <div class="register-btn">
+                                                    <a href="#">Đăng ký ngay</a>
+                                                </div>
+                                            </div>
+                                            <div class="line">
+                                                <b></b>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <?php break;
+                            case 'content_image_right':?>
+                                    <div class="camping-current-item">
+                                        <div class="item-content">
+                                            <div class="item-content-top">
+                                                <h5><?php echo $layout['subtitle'];?></h5>
+                                                <h2><?php echo $layout['title'];?></h2>
+                                            </div>
+                                            <div class="item-content-center">
+                                                <p><?php echo $layout['text_content'];?></p>
+                                            </div>
+                                            <div class="item-content-bot">
+                                                <div class="register-btn">
+                                                    <a href="#">Đăng ký ngay</a>
+                                                </div>
+                                            </div>
+                                            <div class="line">
+                                                <b></b>
+                                            </div>
+                                        </div>
+                                        <div class="item-image">
+                                            <img src="<?php echo $layout['image'];?>">
+                                        </div>
+                                    </div>
+                                <?php break;?>
+                        <?php endswitch;
+                    endforeach;
+                endif;?>
             </div>
         </div>
     </section>

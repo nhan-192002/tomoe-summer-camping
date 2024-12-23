@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="<?php echo theme_uri()?>/assets/style/css/mobile.css"/>
     <link rel="icon" type="image/x-icon" href="<?php echo theme_uri()?>/assets/images/global/logo-teh.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <?php wp_head(); ?>
 </head>
 <body <?php itd_body_id() ?>>

@@ -9,6 +9,10 @@
 <script src="<?php echo theme_uri()?>/assets/scripts/bootstrap.bundle.min.js"></script>
 <script src="<?php echo theme_uri()?>/assets/scripts/popper.min.js"></script>
 <script src="<?php echo theme_uri()?>/assets/scripts/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
 <script src="<?php echo theme_uri()?>/assets/scripts/script.js"></script>
 </body>
 </html>

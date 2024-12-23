@@ -1,14 +1,15 @@
 <?php get_header();?>
 
     <section class="banner" style="background-image: url('<?php echo theme_uri()?>/assets/images/banner.jpg');">
-        <div class="container banner-wrap">
+        <div class="container banner-wrap" data-aos="fade-down" data-aos-duration="2000">
+            <img src="<?php echo theme_uri()?>/assets/images/animation-banner.png">
         </div>
     </section>
 
     <section class="camping-info">
         <div class="container">
             <div class="camping-info-content">
-                <div class="camping-info-left">
+                <div class="camping-info-left" data-aos="fade-right">
                     <h5>Trại hè 2024</h5>
                     <h1>Giới thiệu</h1>
                 </div>
@@ -49,7 +50,7 @@
                 </p>
             </div>
             <div class="camping-memories-center">
-                <div class="left">
+                <div class="left" data-aos="fade-right" data-aos-duration="2000">
                     <img src="<?php echo theme_uri()?>/assets/images/memories-01.jpg">
                 </div>
                 <div class="right">
@@ -57,7 +58,7 @@
                         tụ tập lập hội bắn bi. Đứa nào cũng có một sưu tập bi đủ loại, đủ kích cỡ, đủ sắc màu, như một
                         kho báu quý giá mà không gì có thể đổi lấy được.
                     </p>
-                    <img class="image-position" src="<?php echo theme_uri()?>/assets/images/memories-04.png ">
+                    <img  class="image-position" src="<?php echo theme_uri()?>/assets/images/memories-04.png ">
                 </div>
             </div>
             <div class="camping-memories-bot">
@@ -74,7 +75,7 @@
                         mỗi chúng ta.
                     </p>
                 </div>
-                <div class="right">
+                <div class="right" data-aos="fade-left" data-aos-duration="2000">
                     <img src="<?php echo theme_uri()?>/assets/images/memories-03.jpg">
                 </div>
             </div>
@@ -177,16 +178,104 @@
         </div>
     </section>
 
+    <section class="camping-flavor">
+        <div class="container">
+            <div class="camping-flavor-title">
+                <h5>Trại hè 2024</h5>
+                <h1 class="title">Hương vị mùa hè</h1>
+                <p class="">
+                    Trung Thu năm nay, Cộng đem đến cho bạn những hương vị bánh độc đáo,
+                    hoà quyện nét truyền thống và cách tân, cùng bạn trải nghiệm trọn vẹn và đủ đầy:
+                </p>
+            </div>
+            <div class="camping-flavor-content">
+                <div class="camping-flavor-item">
+                    <img src="<?php echo theme_uri()?>/assets/images/camping-flavor.png" alt="Thập Cẩm Truyền Thống" class="flavor-image">
+                    <div class="flavor-content">
+                        <h2>THẬP CẨM TRUYỀN THỐNG</h2>
+                        <p>Kết hợp từ lạp xưởng, mỡ phần, hạt bí, lá chanh, hạt điều, đậu xanh,... tạo nên hương vị hoàn hảo.</p>
+                    </div>
+                </div>
+                <div class="camping-flavor-item">
+                    <img src="<?php echo theme_uri()?>/assets/images/camping-flavor.png" alt="Thập Cẩm Truyền Thống" class="flavor-image">
+                    <div class="flavor-content">
+                        <h2>THẬP CẨM TRUYỀN THỐNG</h2>
+                        <p>Kết hợp từ lạp xưởng, mỡ phần, hạt bí, lá chanh, hạt điều, đậu xanh,... tạo nên hương vị hoàn hảo.</p>
+                    </div>
+                </div>
+                <div class="camping-flavor-item">
+                    <img src="<?php echo theme_uri()?>/assets/images/camping-flavor.png" alt="Thập Cẩm Truyền Thống" class="flavor-image">
+                    <div class="flavor-content">
+                        <h2>THẬP CẨM TRUYỀN THỐNG</h2>
+                        <p>Kết hợp từ lạp xưởng, mỡ phần, hạt bí, lá chanh, hạt điều, đậu xanh,... tạo nên hương vị hoàn hảo.</p>
+                    </div>
+                </div>
+                <div class="camping-flavor-item">
+                    <img src="<?php echo theme_uri()?>/assets/images/camping-flavor.png" alt="Thập Cẩm Truyền Thống" class="flavor-image">
+                    <div class="flavor-content">
+                        <h2>THẬP CẨM TRUYỀN THỐNG</h2>
+                        <p>Kết hợp từ lạp xưởng, mỡ phần, hạt bí, lá chanh, hạt điều, đậu xanh,... tạo nên hương vị hoàn hảo.</p>
+                    </div>
+                </div>
+                <div class="camping-flavor-item">
+                    <img src="<?php echo theme_uri()?>/assets/images/camping-flavor.png" alt="Thập Cẩm Truyền Thống" class="flavor-image">
+                    <div class="flavor-content">
+                        <h2>THẬP CẨM TRUYỀN THỐNG</h2>
+                        <p>Kết hợp từ lạp xưởng, mỡ phần, hạt bí, lá chanh, hạt điều, đậu xanh,... tạo nên hương vị hoàn hảo.</p>
+                    </div>
+                </div>
+                <div class="camping-flavor-item">
+                    <img src="<?php echo theme_uri()?>/assets/images/camping-flavor.png" alt="Thập Cẩm Truyền Thống" class="flavor-image">
+                    <div class="flavor-content">
+                        <h2>THẬP CẨM TRUYỀN THỐNG</h2>
+                        <p>Kết hợp từ lạp xưởng, mỡ phần, hạt bí, lá chanh, hạt điều, đậu xanh,... tạo nên hương vị hoàn hảo.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="promo-section background-scroll" style="background-image: url('<?php echo theme_uri()?>/assets/images/promo-2.jpg');">
+    </section>
+
+    <section class="camping-contact">
+        <div class="container">
+            <div class="camping-contact-group">
+                <div class="contact-image">
+                    <img class="image" src="<?php echo theme_uri()?>/assets/images/contact.jpg">
+                </div>
+                <div class="contact-content">
+                    <h5 class="contact-title">ƯU ĐÃI DOANH NGHIỆP</h5>
+                    <h1 class="contact-subtitle">ĐẶT MUA SỐ LƯỢNG LỚN</h1>
+                    <p class="contact-description">
+                        Doanh nghiệp, tổ chức có nhu cầu đặt mua hàng số lượng lớn, vui lòng liên hệ BP.Kinh doanh để biết thêm chi tiết về chính sách ưu đãi và chiết khấu:
+                    </p>
+                    <div class="contact-info">
+                        <p><a href="tel:0911866511"><i class="fa fa-phone text-white" aria-hidden="true"></i> 0911.866.511</a></p>
+                        <p><a href="us@congcaphe.com"><i class="fa fa-envelope-o text-white" aria-hidden="true"></i> us@congcaphe.com</a></p>
+                    </div>
+                    <div class="register-btn">
+                        <a href="#">Đăng ký ngay</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="thanks">
         <div class="thanks-img" style="background-image: url('<?php echo theme_uri()?>/assets/images/footer-img.png');">
             <div class="container">
                 <div class="thanks-content">
+                    <div data-aos="fade-up"
+                    data-aos-duration="2000"">
                     <h5>Trại hè 2024</h5>
                     <h1>chúc bạn có một trại hè vui vẻ!</h1>
                     <p>
                         Cảm ơn bạn đã quan tâm đến bộ sưu tập Bánh Trung Thu 2024 của Cộng Cà Phê.
                         Năm nay đủ bánh, đủ trà, có cả chút quà hoài niệm, mùa Trăng thêm ngọt lành, đong trọn đầy niềm vui!
                     </p>
+                </div>
+
                 </div>
             </div>
         </div>

@@ -6,6 +6,7 @@ $darkBlack: #000;
 $grayMedium: #757575;
 $blue: #3f99bb;
 $green: rgb(77, 91, 42);
+$red-btn: rgb(181, 25, 31);
 
 $fs_text_menu: 20px;
 $fs_title_large: 80px;
@@ -94,6 +95,17 @@ a:hover{
           }
           &:last-child{
             margin-right: 0;
+          }
+        }
+        li:last-child{
+          a{
+            padding: 10px 20px;
+            background-color: $red-btn;
+            color: $white;
+          }
+          a:hover{
+            background-color: $white;
+            color: $red-btn;
           }
         }
       }
@@ -321,6 +333,7 @@ a:hover{
   .camping-current-title{
     text-align: center;
     color: $white;
+    margin-bottom: 60px;
     h5{
       font-weight: 400;
       text-transform: uppercase;
@@ -334,6 +347,84 @@ a:hover{
       text-transform: uppercase;
       letter-spacing: 6px;
       margin-bottom: 30px;
+    }
+  }
+  .camping-current-list{
+    .camping-current-item{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding: 60px 0;
+      gap: 40px;
+      position: relative;
+      .item-image, .item-content{
+        width: 48%;
+      }
+      .item-image{
+        img{
+          max-width: 650px;
+        }
+      }
+      .item-content{
+        .item-content-top{
+          margin-bottom: 30px;
+          h5{
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 6px;
+            font-size: 18px;
+            color: $white;
+          }
+          h2{
+            font-size: 48px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #EEC836;
+            letter-spacing: 6px;
+          }
+        }
+        .item-content-center{
+          margin-bottom: 30px;
+          margin-left: 15px;
+          li{
+            font-size: 20px;
+            color: $white;
+            font-weight: 400;
+            letter-spacing: 3px;
+          }
+        }
+        .item-content-bot{
+          .register-btn{
+            cursor: pointer;
+            padding: 15px 30px;
+            border: 1px;
+            text-align: center;
+            background-color: $red-btn;
+            a{
+              color: $white;
+              font-weight: 700;
+              text-transform: uppercase;
+              font-size: 20px;
+            }
+          }
+          .register-btn:hover{
+            background-color: $white;
+            a{
+              color: red;
+            }
+          }
+        }
+        .line{
+          position: absolute;
+          bottom: 0;
+          width: 48%;
+          height: 1px;
+          background: $white;
+          border-radius: 2px;
+          content: "";
+        }
+      }
     }
   }
 }

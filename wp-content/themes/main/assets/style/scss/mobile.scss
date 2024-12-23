@@ -245,6 +245,27 @@ $fs_lh_text_up_medium: 30px;
     }
   }
 
+  // Camping current
+  .camping-current{
+    .camping-current-list{
+      .camping-current-item{
+        flex-direction: column;
+        .item-content, .item-image{
+          width: 100%;
+        }
+        .item-content{
+          order: 2;
+          .line{
+            width: 100%;
+          }
+        }
+        .item-image{
+          order: 1;
+        }
+      }
+    }
+  }
+
   // Thanks
   .thanks{
     .thanks-img{

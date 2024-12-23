@@ -89,9 +89,91 @@
     </section>
 
     <section class="camping-current">
-        <div class="camping-current-title">
-            <h5>Trại hè 2024</h5>
-            <h1>Trại hè năm nay có</h1>
+        <div class="container">
+            <div class="camping-current-title">
+                <h5>Trại hè 2024</h5>
+                <h1>Trại hè năm nay có</h1>
+            </div>
+            <div class="camping-current-list">
+                <div class="camping-current-item">
+                    <div class="item-image">
+                        <img src="<?php echo theme_uri()?>/assets/images/camping-current-1.jpg">
+                    </div>
+                    <div class="item-content">
+                        <div class="item-content-top">
+                            <h5>Trại hè 2024</h5>
+                            <h2>Hộp Trong veo</h2>
+                        </div>
+                        <div class="item-content-center">
+                            <ul>
+                                <li>06 Bánh Trung thu 125gr đủ vị</li>
+                                <li>01 Hộp quà tặng Bi ve + bộ dao gỗ</li>
+                                <li>Tặng kèm 01 túi đựng</li>
+                            </ul>
+                        </div>
+                        <div class="item-content-bot">
+                            <div class="register-btn">
+                                <a href="#">Đăng ký ngay</a>
+                            </div>
+                        </div>
+                        <div class="line">
+                            <b></b>
+                        </div>
+                    </div>
+                </div>
+                <div class="camping-current-item">
+                    <div class="item-content">
+                        <div class="item-content-top">
+                            <h5>Trại hè 2024</h5>
+                            <h2>Hộp Trong veo</h2>
+                        </div>
+                        <div class="item-content-center">
+                            <ul>
+                                <li>06 Bánh Trung thu 125gr đủ vị</li>
+                                <li>01 Hộp quà tặng Bi ve + bộ dao gỗ</li>
+                                <li>Tặng kèm 01 túi đựng</li>
+                            </ul>
+                        </div>
+                        <div class="item-content-bot">
+                            <div class="register-btn">
+                                <a href="#">Đăng ký ngay</a>
+                            </div>
+                        </div>
+                        <div class="line">
+                            <b></b>
+                        </div>
+                    </div>
+                    <div class="item-image">
+                        <img src="<?php echo theme_uri()?>/assets/images/camping-current-1.jpg">
+                    </div>
+                </div>
+                <div class="camping-current-item">
+                    <div class="item-image">
+                        <img src="<?php echo theme_uri()?>/assets/images/camping-current-1.jpg">
+                    </div>
+                    <div class="item-content">
+                        <div class="item-content-top">
+                            <h5>Trại hè 2024</h5>
+                            <h2>Hộp Trong veo</h2>
+                        </div>
+                        <div class="item-content-center">
+                            <ul>
+                                <li>06 Bánh Trung thu 125gr đủ vị</li>
+                                <li>01 Hộp quà tặng Bi ve + bộ dao gỗ</li>
+                                <li>Tặng kèm 01 túi đựng</li>
+                            </ul>
+                        </div>
+                        <div class="item-content-bot">
+                            <div class="register-btn">
+                                <a href="#">Đăng ký ngay</a>
+                            </div>
+                        </div>
+                        <div class="line">
+                            <b></b>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 

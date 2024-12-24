@@ -95,7 +95,7 @@ a:hover {
   font-weight: 700;
   text-transform: uppercase;
   white-space: nowrap;
-  text-shadow: 2px 2px 4px #383838;
+  text-shadow: 2px 2px 2px #383838;
 }
 .navigation .navigation-wrap .navigation-right .navigation-list li:first-child {
   margin-left: 0;
@@ -107,7 +107,7 @@ a:hover {
   color: #3f99bb;
 }
 .navigation .navigation-wrap .navigation-right .navigation-list li:last-child a {
-  padding: 10px 20px;
+  padding: 10px 30px;
   background-color: rgb(181, 25, 31);
   color: #FFF;
 }
@@ -128,7 +128,6 @@ a:hover {
   overflow: hidden;
   background-size: cover;
   background-position: center;
-  margin-bottom: 100px;
 }
 .banner .banner-wrap {
   position: absolute;
@@ -140,7 +139,7 @@ a:hover {
 }
 
 .camping-info {
-  margin-bottom: 100px;
+  padding: 100px 0;
 }
 .camping-info .camping-info-content {
   display: -webkit-box;
@@ -328,7 +327,8 @@ a:hover {
 }
 
 .camping-current {
-  padding: 60px 0;
+  padding-top: 100px;
+  padding-bottom: 60px;
   margin-bottom: 100px;
   background-color: rgb(77, 91, 42);
 }
@@ -470,7 +470,7 @@ a:hover {
 }
 
 .camping-contact {
-  margin: 100px 0;
+  padding: 100px 0;
 }
 .camping-contact .camping-contact-group {
   display: -webkit-box;
@@ -499,6 +499,12 @@ a:hover {
   font-weight: 700;
   letter-spacing: 6px;
   margin-bottom: 30px;
+}
+.camping-contact .camping-contact-group .contact-content p {
+  font-size: 18px;
+  letter-spacing: 3px;
+  font-weight: 400;
+  line-height: 1.4;
 }
 .camping-contact .camping-contact-group .contact-content .contact-info {
   margin: 30px 0;
@@ -576,4 +582,6 @@ a:hover {
   text-transform: uppercase;
   font-weight: 700;
   font-size: 18px;
+  line-height: 1.6;
+  letter-spacing: 2px;
 }

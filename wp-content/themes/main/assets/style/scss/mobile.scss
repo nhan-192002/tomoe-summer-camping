@@ -168,9 +168,10 @@ $fs_lh_text_up_medium: 30px;
   .banner {
     height: 500px;
     .banner-wrap {
+      top: 100px;
       left: 0;
       img{
-        max-width: 200px;
+        max-width: 150px;
       }
     }
   }
@@ -357,6 +358,15 @@ $fs_lh_text_up_medium: 30px;
 
   // Camping flavor
   .camping-flavor{
+    .camping-flavor-content{
+      .camping-flavor-item {
+        flex-direction: column;
+        text-align: center;
+        .flavor-image{
+          margin-bottom: 30px;
+        }
+      }
+    }
   }
 
   // Promo

@@ -3,7 +3,7 @@
 ?>
 <footer id="footer" class="footer-custom position-relative">
     <div class="footer-copyright">
-        <h4 class="copyright"><?php echo date('Y'); ?> © <?php echo $copyright;?> </h4>
+        <h4 class="copyright"><?php echo $copyright;?> © <?php echo date('Y'); ?></h4>
     </div>
 </footer>
 

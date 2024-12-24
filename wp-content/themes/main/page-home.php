@@ -7,6 +7,8 @@
     $promo_top = get_field('promo_top', get_the_ID());
     $promo_bot = get_field('promo_bot', get_the_ID());
     $camping_flavor = get_field('camping_flavor', get_the_ID());
+    $camping_contact = get_field('camping_contact', get_the_ID());
+    $thanks = get_field('thanks', get_the_ID());
 ?>
 
 <?php get_header();?>
@@ -17,7 +19,7 @@
         </div>
     </section>
 
-    <section class="camping-info">
+    <section id="information" class="camping-info">
         <div class="container">
             <div class="camping-info-content">
                 <div class="camping-info-left camping-title" data-aos="fade-right">
@@ -190,21 +192,21 @@
     <section class="promo-section background-scroll" style="background-image: url('<?php echo theme_uri()?>/assets/images/promo-2.jpg');">
     </section>
 
-    <section class="camping-contact">
+    <section id="contact" class="camping-contact">
         <div class="container">
             <div class="camping-contact-group">
                 <div class="contact-image">
-                    <img class="image" src="<?php echo theme_uri()?>/assets/images/contact.jpg">
+                    <img class="image" src="<?php echo $camping_contact['image'];?>">
                 </div>
                 <div class="contact-content camping-title">
-                    <h5 class="contact-title">ƯU ĐÃI DOANH NGHIỆP</h5>
-                    <h2 class="contact-subtitle">ĐẶT MUA SỐ LƯỢNG LỚN</h2>
+                    <h5 class="contact-subtitle"><?php echo $camping_contact['subtitle'];?></h5>
+                    <h2 class="contact-title"><?php echo $camping_contact['title'];?></h2>
                     <p class="contact-description">
-                        Doanh nghiệp, tổ chức có nhu cầu đặt mua hàng số lượng lớn, vui lòng liên hệ BP.Kinh doanh để biết thêm chi tiết về chính sách ưu đãi và chiết khấu:
+                        <?php echo $camping_contact['description'];?>
                     </p>
                     <div class="contact-info">
-                        <p><a href="tel:0911866511"><i class="fa fa-phone text-white" aria-hidden="true"></i> 0911.866.511</a></p>
-                        <p><a href="us@congcaphe.com"><i class="fa fa-envelope-o text-white" aria-hidden="true"></i> us@congcaphe.com</a></p>
+                        <p><a href="tel:0911866511"><i class="fa fa-phone text-white" aria-hidden="true"></i> <?php echo $camping_contact['phone'];?></a></p>
+                        <p><a href="us@congcaphe.com"><i class="fa fa-envelope-o text-white" aria-hidden="true"></i> <?php echo $camping_contact['email'];?></a></p>
                     </div>
                     <div class="register-btn">
                         <a href="#">Đăng ký ngay</a>
@@ -215,16 +217,15 @@
     </section>
 
     <section class="thanks">
-        <div class="thanks-img" style="background-image: url('<?php echo theme_uri()?>/assets/images/footer-img.png');">
+        <div class="thanks-img" style="background-image: url('<?php echo $thanks['bg_image'];?>');">
             <div class="container">
                 <div class="thanks-content camping-title">
                     <div data-aos="fade-up"
                     data-aos-duration="2000"">
-                    <h5>Trại hè 2024</h5>
-                    <h1>chúc bạn có một trại hè vui vẻ!</h1>
+                    <h5><?php echo $thanks['subtitle'];?></h5>
+                    <h1><?php echo $thanks['title'];?></h1>
                     <p>
-                        Cảm ơn bạn đã quan tâm đến bộ sưu tập Bánh Trung Thu 2024 của Cộng Cà Phê.
-                        Năm nay đủ bánh, đủ trà, có cả chút quà hoài niệm, mùa Trăng thêm ngọt lành, đong trọn đầy niềm vui!
+                        <?php echo $thanks['description'];?>
                     </p>
                 </div>
 

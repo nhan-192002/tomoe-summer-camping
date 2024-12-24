@@ -30,6 +30,21 @@ a:hover {
   z-index: 11;
 }
 
+.camping-title h5 {
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+.camping-title h1 {
+  font-size: 64px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  margin-bottom: 30px;
+}
+
 .navigation {
   position: fixed;
   width: 100%;
@@ -151,22 +166,10 @@ a:hover {
       -ms-flex-align: end;
           align-items: end;
   padding-left: 10px;
-}
-.camping-info .camping-info-left h5 {
-  font-weight: 400;
   color: rgb(77, 91, 42);
-  text-transform: uppercase;
-  letter-spacing: 6px;
-  font-size: 18px;
-  margin-bottom: 30px;
 }
 .camping-info .camping-info-left h1 {
-  font-size: 64px;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: rgb(77, 91, 42);
-  letter-spacing: 6px;
-  margin-bottom: 30px;
+  margin-bottom: 0;
 }
 .camping-info .camping-info-right .camping-info-description p {
   color: rgb(77, 91, 42);
@@ -174,7 +177,6 @@ a:hover {
   line-height: 1.4;
   text-align: justify;
   letter-spacing: 3px;
-  padding-bottom: 10px;
 }
 
 .camping-gallery {
@@ -184,7 +186,6 @@ a:hover {
   width: 100%;
   overflow-x: hidden;
   white-space: nowrap;
-  padding: 20px 0;
 }
 .camping-gallery .camping-horizontal-gallery .camping-image-list {
   display: -webkit-box;
@@ -193,7 +194,7 @@ a:hover {
   gap: 10px;
 }
 .camping-gallery .camping-horizontal-gallery .camping-image-list img {
-  width: 700px;
+  width: 600px;
   height: 500px;
   display: inline-block;
   -o-object-fit: cover;
@@ -208,22 +209,7 @@ a:hover {
 .camping-memories .camping-memories-top {
   text-align: center;
   margin-bottom: 60px;
-}
-.camping-memories .camping-memories-top h5 {
-  font-weight: 400;
   color: rgb(77, 91, 42);
-  text-transform: uppercase;
-  letter-spacing: 6px;
-  font-size: 18px;
-  margin-bottom: 30px;
-}
-.camping-memories .camping-memories-top h1 {
-  font-size: 64px;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: rgb(77, 91, 42);
-  letter-spacing: 6px;
-  margin-bottom: 30px;
 }
 .camping-memories .camping-memories-top p {
   font-size: 18px;
@@ -289,7 +275,7 @@ a:hover {
 .background-scroll {
   position: relative;
   width: 100%;
-  min-height: 420px;
+  min-height: 400px;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -318,7 +304,7 @@ a:hover {
 
 .promo-section .promo-title {
   text-align: center;
-  color: white;
+  color: #FFF;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
   z-index: 2;
 }
@@ -343,21 +329,9 @@ a:hover {
 .camping-current .camping-current-title {
   text-align: center;
   color: #FFF;
-  margin-bottom: 60px;
-}
-.camping-current .camping-current-title h5 {
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 6px;
-  font-size: 18px;
-  margin-bottom: 30px;
 }
 .camping-current .camping-current-title h1 {
-  font-size: 64px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 6px;
-  margin-bottom: 30px;
+  margin-bottom: 0;
 }
 .camping-current .camping-current-list .camping-current-item {
   display: -webkit-box;
@@ -390,7 +364,7 @@ a:hover {
   font-size: 18px;
   color: #FFF;
 }
-.camping-current .camping-current-list .camping-current-item .item-content .item-content-top h2 {
+.camping-current .camping-current-list .camping-current-item .item-content .item-content-top h3 {
   font-size: 48px;
   font-weight: 700;
   text-transform: uppercase;
@@ -442,25 +416,8 @@ a:hover {
 }
 .camping-flavor .camping-flavor-title {
   text-align: center;
-  color: #FFF;
+  color: rgb(77, 91, 42);
   margin-bottom: 60px;
-}
-.camping-flavor .camping-flavor-title h5 {
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 6px;
-  font-size: 18px;
-  color: rgb(77, 91, 42);
-  margin-bottom: 30px;
-}
-.camping-flavor .camping-flavor-title h1 {
-  font-size: 48px;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: rgb(77, 91, 42);
-  letter-spacing: 6px;
-  font-size: 64px;
-  margin: 30px 0;
 }
 .camping-flavor .camping-flavor-title p {
   font-size: 18px;
@@ -530,21 +487,12 @@ a:hover {
   padding: 0 40px;
   color: #FFF;
 }
-.camping-contact .camping-contact-group .contact-content h5 {
-  font-weight: 400;
+.camping-contact .camping-contact-group .contact-content h2 {
   text-transform: uppercase;
-  letter-spacing: 6px;
-  font-size: 18px;
-  color: #FFF;
-}
-.camping-contact .camping-contact-group .contact-content h1 {
-  font-size: 48px;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: #FFF;
-  letter-spacing: 3px;
   font-size: 32px;
-  margin: 30px 0;
+  font-weight: 700;
+  letter-spacing: 6px;
+  margin-bottom: 30px;
 }
 .camping-contact .camping-contact-group .contact-content .contact-info {
   margin: 30px 0;
@@ -597,22 +545,6 @@ a:hover {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
-.thanks .thanks-img .thanks-content h5 {
-  font-weight: 400;
-  color: rgb(77, 91, 42);
-  text-transform: uppercase;
-  letter-spacing: 6px;
-  font-size: 18px;
-  margin-bottom: 30px;
-}
-.thanks .thanks-img .thanks-content h1 {
-  font-size: 64px;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: rgb(77, 91, 42);
-  letter-spacing: 6px;
-  margin-bottom: 30px;
-}
 .thanks .thanks-img .thanks-content p {
   font-size: 18px;
   line-height: 1.4;
@@ -637,5 +569,5 @@ a:hover {
   color: #FFF;
   text-transform: uppercase;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 18px;
 }

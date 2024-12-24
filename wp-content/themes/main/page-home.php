@@ -19,7 +19,7 @@
     <section class="camping-info">
         <div class="container">
             <div class="camping-info-content">
-                <div class="camping-info-left" data-aos="fade-right">
+                <div class="camping-info-left camping-title" data-aos="fade-right">
                     <h5><?php echo $camping_info['subtitle'];?></h5>
                     <h1><?php echo $camping_info['title'];?></h1>
                 </div>
@@ -47,7 +47,7 @@
 
     <section class="camping-memories">
         <div class="container">
-            <div class="camping-memories-top">
+            <div class="camping-memories-top camping-title">
                 <h5><?php echo $camping_memories['camping_memories_title']['subtitle'];?></h5>
                 <h1><?php echo $camping_memories['camping_memories_title']['title'];?></h1>
                 <p>
@@ -98,7 +98,7 @@
 
     <section class="camping-current">
         <div class="container">
-            <div class="camping-current-title">
+            <div class="camping-current-title camping-title">
                 <h5><?php echo $camping_current['camping_current_title']['subtitle'];?></h5>
                 <h1><?php echo $camping_current['camping_current_title']['title'];?></h1>
             </div>
@@ -114,7 +114,7 @@
                                         <div class="item-content">
                                             <div class="item-content-top">
                                                 <h5><?php echo $layout['subtitle'];?></h5>
-                                                <h2><?php echo $layout['title'];?></h2>
+                                                <h3><?php echo $layout['title'];?></h3>
                                             </div>
                                             <div class="item-content-center">
                                                 <p><?php echo $layout['text_content'];?></p>
@@ -135,7 +135,7 @@
                                         <div class="item-content">
                                             <div class="item-content-top">
                                                 <h5><?php echo $layout['subtitle'];?></h5>
-                                                <h2><?php echo $layout['title'];?></h2>
+                                                <h3><?php echo $layout['title'];?></h3>
                                             </div>
                                             <div class="item-content-center">
                                                 <p><?php echo $layout['text_content'];?></p>
@@ -163,7 +163,7 @@
 
     <section class="camping-flavor">
         <div class="container">
-            <div class="camping-flavor-title">
+            <div class="camping-flavor-title camping-title">
                 <h5>Trại hè 2024</h5>
                 <h1 class="title">Hương vị mùa hè</h1>
                 <p class="">
@@ -227,9 +227,9 @@
                 <div class="contact-image">
                     <img class="image" src="<?php echo theme_uri()?>/assets/images/contact.jpg">
                 </div>
-                <div class="contact-content">
+                <div class="contact-content camping-title">
                     <h5 class="contact-title">ƯU ĐÃI DOANH NGHIỆP</h5>
-                    <h1 class="contact-subtitle">ĐẶT MUA SỐ LƯỢNG LỚN</h1>
+                    <h2 class="contact-subtitle">ĐẶT MUA SỐ LƯỢNG LỚN</h2>
                     <p class="contact-description">
                         Doanh nghiệp, tổ chức có nhu cầu đặt mua hàng số lượng lớn, vui lòng liên hệ BP.Kinh doanh để biết thêm chi tiết về chính sách ưu đãi và chiết khấu:
                     </p>
@@ -248,7 +248,7 @@
     <section class="thanks">
         <div class="thanks-img" style="background-image: url('<?php echo theme_uri()?>/assets/images/footer-img.png');">
             <div class="container">
-                <div class="thanks-content">
+                <div class="thanks-content camping-title">
                     <div data-aos="fade-up"
                     data-aos-duration="2000"">
                     <h5>Trại hè 2024</h5>

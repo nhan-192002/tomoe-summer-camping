@@ -6,6 +6,7 @@
     $camping_current = get_field('camping_current', get_the_ID());
     $promo_top = get_field('promo_top', get_the_ID());
     $promo_bot = get_field('promo_bot', get_the_ID());
+    $camping_flavor = get_field('camping_flavor', get_the_ID());
 ?>
 
 <?php get_header();?>
@@ -164,56 +165,24 @@
     <section class="camping-flavor">
         <div class="container">
             <div class="camping-flavor-title camping-title">
-                <h5>Trại hè 2024</h5>
-                <h1 class="title">Hương vị mùa hè</h1>
+                <h5><?php echo $camping_flavor['camping_flavor_title']['subtitle'];?></h5>
+                <h1 class="title"><?php echo $camping_flavor['camping_flavor_title']['title'];?></h1>
                 <p class="">
-                    Trung Thu năm nay, Cộng đem đến cho bạn những hương vị bánh độc đáo,
-                    hoà quyện nét truyền thống và cách tân, cùng bạn trải nghiệm trọn vẹn và đủ đầy:
+                    <?php echo $camping_flavor['camping_flavor_title']['description'];?>
                 </p>
             </div>
             <div class="camping-flavor-content">
-                <div class="camping-flavor-item">
-                    <img src="<?php echo theme_uri()?>/assets/images/camping-flavor.png" alt="Thập Cẩm Truyền Thống" class="flavor-image">
-                    <div class="flavor-content">
-                        <h2>THẬP CẨM TRUYỀN THỐNG</h2>
-                        <p>Kết hợp từ lạp xưởng, mỡ phần, hạt bí, lá chanh, hạt điều, đậu xanh,... tạo nên hương vị hoàn hảo.</p>
-                    </div>
-                </div>
-                <div class="camping-flavor-item">
-                    <img src="<?php echo theme_uri()?>/assets/images/camping-flavor.png" alt="Thập Cẩm Truyền Thống" class="flavor-image">
-                    <div class="flavor-content">
-                        <h2>THẬP CẨM TRUYỀN THỐNG</h2>
-                        <p>Kết hợp từ lạp xưởng, mỡ phần, hạt bí, lá chanh, hạt điều, đậu xanh,... tạo nên hương vị hoàn hảo.</p>
-                    </div>
-                </div>
-                <div class="camping-flavor-item">
-                    <img src="<?php echo theme_uri()?>/assets/images/camping-flavor.png" alt="Thập Cẩm Truyền Thống" class="flavor-image">
-                    <div class="flavor-content">
-                        <h2>THẬP CẨM TRUYỀN THỐNG</h2>
-                        <p>Kết hợp từ lạp xưởng, mỡ phần, hạt bí, lá chanh, hạt điều, đậu xanh,... tạo nên hương vị hoàn hảo.</p>
-                    </div>
-                </div>
-                <div class="camping-flavor-item">
-                    <img src="<?php echo theme_uri()?>/assets/images/camping-flavor.png" alt="Thập Cẩm Truyền Thống" class="flavor-image">
-                    <div class="flavor-content">
-                        <h2>THẬP CẨM TRUYỀN THỐNG</h2>
-                        <p>Kết hợp từ lạp xưởng, mỡ phần, hạt bí, lá chanh, hạt điều, đậu xanh,... tạo nên hương vị hoàn hảo.</p>
-                    </div>
-                </div>
-                <div class="camping-flavor-item">
-                    <img src="<?php echo theme_uri()?>/assets/images/camping-flavor.png" alt="Thập Cẩm Truyền Thống" class="flavor-image">
-                    <div class="flavor-content">
-                        <h2>THẬP CẨM TRUYỀN THỐNG</h2>
-                        <p>Kết hợp từ lạp xưởng, mỡ phần, hạt bí, lá chanh, hạt điều, đậu xanh,... tạo nên hương vị hoàn hảo.</p>
-                    </div>
-                </div>
-                <div class="camping-flavor-item">
-                    <img src="<?php echo theme_uri()?>/assets/images/camping-flavor.png" alt="Thập Cẩm Truyền Thống" class="flavor-image">
-                    <div class="flavor-content">
-                        <h2>THẬP CẨM TRUYỀN THỐNG</h2>
-                        <p>Kết hợp từ lạp xưởng, mỡ phần, hạt bí, lá chanh, hạt điều, đậu xanh,... tạo nên hương vị hoàn hảo.</p>
-                    </div>
-                </div>
+                <?php if ($camping_flavor['camping_flavor_content']):
+                    foreach ($camping_flavor['camping_flavor_content'] as $item):?>
+                        <div class="camping-flavor-item">
+                            <img src="<?php echo $item['content_image'];?>" alt="<?php echo $item['content_title'];?>" class="flavor-image">
+                            <div class="flavor-content">
+                                <h2><?php echo $item['content_title'];?></h2>
+                                <p><?php echo $item['content_description'];?></p>
+                            </div>
+                        </div>
+                    <?php endforeach;
+                endif;?>
             </div>
         </div>
     </section>

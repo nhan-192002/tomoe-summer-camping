@@ -1,3 +1,7 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 img {
   width: 100%;
 }
@@ -9,7 +13,6 @@ ul {
 
 a {
   text-decoration: none;
-  font-family: "A";
 }
 
 a:hover {
@@ -87,18 +90,21 @@ a:hover {
   padding-left: 100px;
 }
 .navigation .navigation-wrap .navigation-right .navigation-list li a {
-  font-size: 20px;
   color: #FFF;
   font-size: 18px;
   font-weight: 700;
   text-transform: uppercase;
   white-space: nowrap;
+  text-shadow: 2px 2px 4px #383838;
 }
 .navigation .navigation-wrap .navigation-right .navigation-list li:first-child {
   margin-left: 0;
 }
 .navigation .navigation-wrap .navigation-right .navigation-list li:last-child {
   margin-right: 0;
+}
+.navigation .navigation-wrap .navigation-right .navigation-list li a:hover {
+  color: #3f99bb;
 }
 .navigation .navigation-wrap .navigation-right .navigation-list li:last-child a {
   padding: 10px 20px;

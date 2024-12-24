@@ -8,21 +8,16 @@ $blue: #3f99bb;
 $green: rgb(77, 91, 42);
 $red-btn: rgb(181, 25, 31);
 
-$fs_text_menu: 20px;
-$fs_title_large: 80px;
-$fs_lh_title_large: 80px;
-$fs_title_medium: 34px;
-$fs_lh_title_medium: 44px;
-$fs_title_small: 24px;
-$fs_lh_title_small: 32px;
-$fs_text: 14px;
-$fs_lh_text: 20px;
-$fs_text_medium: 18px;
-$fs_lh_text_medium: 28px;
-$fs_text_up_medium: 30px;
-$fs_lh_text_up_medium: 30px;
+$fs_title_large: 64px;
+$fs_subtitle_large: 18px;
+$fs_title_medium: 48px;
+$fs_subtitle_medium: 16px;
+$fs_title_small: 32px;
+$fs_subtitle_small: 14px;
+$fs_text: 18px;
 
 body{
+  font-family: Arial, Helvetica, sans-serif;
 }
 img{
   width: 100%;
@@ -33,7 +28,6 @@ ul{
 }
 a{
   text-decoration: none;
-  font-family: "A";
 }
 a:hover{
   text-decoration: none;
@@ -100,18 +94,21 @@ a:hover{
         li{
           padding-left: 100px;
           a{
-            font-size: $fs_text_menu;
             color: $white;
             font-size: 18px;
             font-weight: 700;
             text-transform: uppercase;
             white-space: nowrap;
+            text-shadow: 2px 2px 4px $black;
           }
           &:first-child{
             margin-left: 0;
           }
           &:last-child{
             margin-right: 0;
+          }
+          a:hover{
+            color: $blue;
           }
         }
         li:last-child{

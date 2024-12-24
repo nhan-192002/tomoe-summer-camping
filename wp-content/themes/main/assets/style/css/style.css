@@ -57,6 +57,7 @@ a:hover {
   transition: -webkit-transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  overflow: hidden;
 }
 .navigation .navigation-wrap {
   display: -webkit-box;
@@ -122,10 +123,10 @@ a:hover {
 }
 
 .banner {
-  position: relative;
   width: 100%;
   height: 800px;
   overflow: hidden;
+  position: relative;
   background-size: cover;
   background-position: center;
 }
@@ -470,7 +471,7 @@ a:hover {
 }
 
 .camping-contact {
-  padding: 100px 0;
+  padding-top: 100px;
 }
 .camping-contact .camping-contact-group {
   display: -webkit-box;
@@ -486,12 +487,12 @@ a:hover {
 }
 .camping-contact .camping-contact-group .contact-image img {
   max-width: 100%;
-  height: 510px;
+  height: 600px;
 }
 .camping-contact .camping-contact-group .contact-content {
   width: 50%;
-  padding: 0 40px;
   color: #FFF;
+  padding: 0 30px;
 }
 .camping-contact .camping-contact-group .contact-content h2 {
   text-transform: uppercase;
@@ -536,6 +537,86 @@ a:hover {
 }
 .camping-contact .camping-contact-group .contact-content .register-btn:hover a {
   color: red;
+}
+
+.camping-registration {
+  padding-top: 100px;
+}
+.camping-registration .camping-registration-title {
+  color: rgb(77, 91, 42);
+  text-align: center;
+}
+.camping-registration .camping-registration-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #FFF;
+  -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  padding: 60px;
+  margin-bottom: 100px;
+}
+.camping-registration .camping-registration-content .register-form {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 20px;
+}
+.camping-registration .camping-registration-content .register-form .success-message {
+  font-size: 18px;
+  font-weight: 700;
+}
+.camping-registration .camping-registration-content .register-form h2 {
+  font-size: 24px;
+  color: rgb(77, 91, 42);
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.camping-registration .camping-registration-content .register-form form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 15px;
+}
+.camping-registration .camping-registration-content .register-form form input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.camping-registration .camping-registration-content .register-form form input[type=submit] {
+  padding: 10px;
+  font-size: 18px;
+  color: #FFF;
+  background-color: rgb(77, 91, 42);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+.camping-registration .camping-registration-content .register-form form input[type=submit]:hover {
+  background-color: #285526;
+}
+.camping-registration .camping-registration-content .register-image {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
+}
+.camping-registration .camping-registration-content .register-image img {
+  max-width: 100%;
 }
 
 .thanks .thanks-img {

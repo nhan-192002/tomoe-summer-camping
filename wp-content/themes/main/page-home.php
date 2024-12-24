@@ -216,6 +216,24 @@
         </div>
     </section>
 
+    <section id="register" class="camping-registration">
+        <div class="container">
+            <div class="camping-registration-title camping-title">
+                <h5> Trại hè 2024</h5>
+                <h1> Đăng ký </h1>
+            </div>
+            <div class="camping-registration-content">
+                <div class="register-form">
+                    <h2>ĐĂNG KÝ TRẢI NGHIỆM TRẠI HÈ</h2>
+                    <?php echo do_shortcode('[custom_registration_form]'); ?>
+                </div>
+                <div class="register-image">
+                    <img src="<?php echo theme_uri()?>/assets/images/course-01.jpg" alt="Group of children enjoying a class">
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="thanks">
         <div class="thanks-img" style="background-image: url('<?php echo $thanks['bg_image'];?>');">
             <div class="container">

@@ -79,6 +79,18 @@
   .camping-flavor .camping-flavor-content .camping-flavor-item {
     width: 100%;
   }
+  .camping-registration .camping-registration-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .camping-registration .camping-registration-content .register-image {
+    display: none;
+  }
+  .camping-registration .camping-registration-content .register-form {
+    width: 100%;
+  }
 }
 @media (max-width: 768px) {
   .banner {
@@ -306,5 +318,19 @@
   }
   .camping-contact .camping-contact-group .contact-content h2 {
     font-size: 28px;
+  }
+  .camping-registration .camping-registration-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    padding: 30px;
+  }
+  .camping-registration .camping-registration-content .register-image {
+    display: none;
+  }
+  .camping-registration .camping-registration-content .register-form {
+    padding: 10px;
   }
 }

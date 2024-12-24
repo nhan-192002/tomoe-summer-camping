@@ -6,23 +6,17 @@ $darkBlack: #000;
 $grayMedium: #757575;
 $blue: #3f99bb;
 $green: rgb(77, 91, 42);
+$red-btn: rgb(181, 25, 31);
 
-$fs_text_menu: 20px;
-$fs_title_large: 80px;
-$fs_lh_title_large: 80px;
-$fs_title_medium: 34px;
-$fs_lh_title_medium: 44px;
-$fs_title_small: 24px;
-$fs_lh_title_small: 32px;
-$fs_text: 14px;
-$fs_lh_text: 20px;
-$fs_text_medium: 18px;
-$fs_lh_text_medium: 28px;
-$fs_text_up_medium: 30px;
-$fs_lh_text_up_medium: 30px;
+$fs_title_large: 64px;
+$fs_subtitle_large: 18px;
+$fs_title_medium: 48px;
+$fs_subtitle_medium: 16px;
+$fs_title_small: 32px;
+$fs_subtitle_small: 14px;
+$fs_text: 18px;
 
 @media (max-width: 1024px) {
-
   // Navigation
   .navigation {
     .navigation-wrap {
@@ -36,7 +30,6 @@ $fs_lh_text_up_medium: 30px;
           }
         }
       }
-
       .navigation-right {
         .navigation-list {
           li {
@@ -157,6 +150,27 @@ $fs_lh_text_up_medium: 30px;
     .camping-flavor-content{
       flex-direction: column;
       .camping-flavor-item{
+        width: 100%;
+      }
+    }
+  }
+
+  .camping-contact {
+    .camping-contact-group {
+      .contact-content {
+
+      }
+    }
+  }
+
+  // Camping register
+  .camping-registration {
+    .camping-registration-content {
+      flex-direction: column;
+      .register-image{
+        display: none;
+      }
+      .register-form{
         width: 100%;
       }
     }
@@ -426,17 +440,26 @@ $fs_lh_text_up_medium: 30px;
       .contact-image, .contact-content{
         width: 100%;
       }
-    }
-  }
-
-  // Camping Contact
-  .camping-contact{
-    .camping-contact-group{
       .contact-content{
         padding: 60px 30px;
         h2{
           font-size: 28px;
         }
+      }
+    }
+  }
+
+  // Camping registration
+  .camping-registration {
+    .camping-registration-content {
+      flex-direction: column;
+      text-align: center;
+      padding: 30px;
+      .register-image{
+        display: none;
+      }
+      .register-form{
+        padding: 10px;
       }
     }
   }

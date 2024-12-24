@@ -70,6 +70,7 @@ a:hover{
   z-index: 11;
   background-color: $green;
   transition: transform 0.3s ease-in-out;
+  overflow: hidden;
   .navigation-wrap{
     display: flex;
     align-items: center;
@@ -132,10 +133,10 @@ a:hover{
 
 // Custom Banner
 .banner {
-  position: relative;
   width: 100%;
   height: 800px;
   overflow: hidden;
+  position: relative;
   background-size: cover;
   background-position: center;
   .banner-wrap {
@@ -461,7 +462,7 @@ a:hover{
 
 // Contact
 .camping-contact{
-  padding: 100px 0;
+  padding-top: 100px;
   .camping-contact-group{
     display: flex;
     align-items: center;
@@ -470,13 +471,13 @@ a:hover{
       width: 50%;
       img{
         max-width: 100%;
-        height: 510px;
+        height: 600px;
       }
     }
     .contact-content{
       width: 50%;
-      padding: 0 40px;
       color: $white;
+      padding: 0 30px;
       h2{
         text-transform: uppercase;
         font-size: 32px;
@@ -520,6 +521,70 @@ a:hover{
         a{
           color: red;
         }
+      }
+    }
+  }
+}
+
+// register
+.camping-registration{
+  padding-top: 100px;
+  .camping-registration-title{
+    color: $green;
+    text-align: center;
+  }
+  .camping-registration-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 60px;
+    margin-bottom: 100px;
+    .register-form{
+      flex: 1;
+      padding: 20px;
+      .success-message{
+        font-size: 18px;
+        font-weight: 700;
+      }
+      h2 {
+        font-size: 24px;
+        color: $green;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+        form {
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+          input {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+          }
+          input[type='submit'] {
+            padding: 10px;
+            font-size: 18px;
+            color: $white;
+            background-color: $green;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+          }
+          input[type='submit']:hover {
+            background-color: #285526;
+          }
+        }
+    }
+    .register-image {
+      flex: 1;
+      text-align: center;
+      img {
+        max-width: 100%;
       }
     }
   }

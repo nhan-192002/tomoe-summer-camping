@@ -16,7 +16,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <?php wp_head(); ?>
 </head>
-<body <?php itd_body_id() ?>>
+<body <?php itd_body_id(); ?>>
 <?php wp_body_open(); ?>
 <header id="header" class="navigation">
     <div class="container">

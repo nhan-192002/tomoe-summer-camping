@@ -534,7 +534,6 @@ a:hover{
 
 // register
 .camping-registration{
-  margin-top: 100px;
   .camping-registration-title{
     color: $green;
     text-align: center;
@@ -544,8 +543,9 @@ a:hover{
     align-items: center;
     justify-content: center;
     background-color: $white;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    box-shadow:1px 2px 6px rgba(0, 0, 0, 0.3);
     padding: 60px;
+    margin-bottom: 50px;
     .register-form{
       flex: 1;
       padding: 20px;
@@ -600,7 +600,7 @@ a:hover{
 
 // Thanks
 .thanks{
-  margin-top: 100px;
+  margin-top: 50px;
   .thanks-img{
     position: relative;
     bottom: 48px;

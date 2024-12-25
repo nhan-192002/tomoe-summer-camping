@@ -45,8 +45,28 @@ $(document).ready(function() {
 
         requestAnimationFrame(autoMoveImages); // Keep animating
     }
-
     autoMoveImages();
+
+    // Disable right-click and F12 developer tools
+    $(document).on('contextmenu', function (e) {
+        e.preventDefault();
+        alert('Right-click is disabled on this website.');
+    });
+
+    $(document).on('keydown', function (e) {
+        if (e.which === 123 || (e.ctrlKey && e.shiftKey && e.which === 73)) {
+            e.preventDefault();
+            alert('Developer tools are disabled.');
+        }
+    });
+
+    $(document).on('selectstart', function (e) {
+        e.preventDefault();
+    });
+
+    $(document).on('dragstart', function (e) {
+        e.preventDefault();
+    });
 
 });
 

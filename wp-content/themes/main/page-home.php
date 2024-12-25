@@ -247,7 +247,6 @@
                         <?php echo $thanks['description'];?>
                     </p>
                 </div>
-
                 </div>
             </div>
         </div>

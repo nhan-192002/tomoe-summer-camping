@@ -273,7 +273,7 @@ $fs_text: 18px;
           a {
             padding: 15px 100px 15px 20px;
             text-decoration: none;
-            font-size: 12px;
+            font-size: 16px;
             color: #757575;
             display: block;
             transition: 0.3s;
@@ -428,7 +428,13 @@ $fs_text: 18px;
     .camping-flavor-content{
       flex-direction: column;
       .camping-flavor-item{
+        margin: 15px 0;
         width: 100%;
+        .flavor-content{
+          p{
+            font-size: 16px;
+          }
+        }
       }
     }
   }
@@ -443,7 +449,10 @@ $fs_text: 18px;
       .contact-content{
         padding: 60px 30px;
         h2{
-          font-size: 28px;
+          font-size: 24px;
+        }
+        p{
+          font-size: 16px;
         }
       }
     }

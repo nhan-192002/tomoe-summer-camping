@@ -23,6 +23,11 @@ a:hover {
   display: none;
 }
 
+.container {
+  overflow: hidden;
+  width: 100%;
+}
+
 .overlay {
   position: fixed;
   top: 0;
@@ -57,7 +62,6 @@ a:hover {
   transition: -webkit-transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
-  overflow: hidden;
 }
 .navigation .navigation-wrap {
   display: -webkit-box;
@@ -88,7 +92,7 @@ a:hover {
   margin: 0;
 }
 .navigation .navigation-wrap .navigation-right .navigation-list li {
-  padding-left: 100px;
+  padding-left: 80px;
 }
 .navigation .navigation-wrap .navigation-right .navigation-list li a {
   color: #FFF;
@@ -111,6 +115,7 @@ a:hover {
   padding: 10px 30px;
   background-color: rgb(181, 25, 31);
   color: #FFF;
+  text-shadow: none;
 }
 .navigation .navigation-wrap .navigation-right .navigation-list li:last-child a:hover {
   background-color: #FFF;
@@ -471,7 +476,7 @@ a:hover {
 }
 
 .camping-contact {
-  padding-top: 100px;
+  margin: 100px 0;
 }
 .camping-contact .camping-contact-group {
   display: -webkit-box;
@@ -540,7 +545,7 @@ a:hover {
 }
 
 .camping-registration {
-  padding-top: 100px;
+  margin-top: 100px;
 }
 .camping-registration .camping-registration-title {
   color: rgb(77, 91, 42);
@@ -557,10 +562,9 @@ a:hover {
       -ms-flex-pack: center;
           justify-content: center;
   background-color: #FFF;
-  -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
   padding: 60px;
-  margin-bottom: 100px;
 }
 .camping-registration .camping-registration-content .register-form {
   -webkit-box-flex: 1;
@@ -605,6 +609,9 @@ a:hover {
   cursor: pointer;
   -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
+  text-transform: uppercase;
+  width: 50%;
+  margin-top: 20px;
 }
 .camping-registration .camping-registration-content .register-form form input[type=submit]:hover {
   background-color: #285526;
@@ -619,9 +626,12 @@ a:hover {
   max-width: 100%;
 }
 
+.thanks {
+  margin-top: 100px;
+}
 .thanks .thanks-img {
   position: relative;
-  bottom: 38px;
+  bottom: 48px;
   width: 100%;
   height: 800px;
   overflow: hidden;

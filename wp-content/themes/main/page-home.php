@@ -8,6 +8,7 @@
     $promo_bot = get_field('promo_bot', get_the_ID());
     $camping_flavor = get_field('camping_flavor', get_the_ID());
     $camping_contact = get_field('camping_contact', get_the_ID());
+    $camping_registration = get_field('camping_registration', get_the_ID());
     $thanks = get_field('thanks', get_the_ID());
 ?>
 
@@ -22,7 +23,7 @@
     <section id="information" class="camping-info">
         <div class="container">
             <div class="camping-info-content">
-                <div class="camping-info-left camping-title" data-aos="fade-right">
+                <div class="camping-info-left camping-title" data-aos="fade-right" data-aos-duration="2000">
                     <h5><?php echo $camping_info['subtitle'];?></h5>
                     <h1><?php echo $camping_info['title'];?></h1>
                 </div>
@@ -99,7 +100,7 @@
         </div>
     </section>
 
-    <section class="camping-current">
+    <section class="camping-current" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease">
         <div class="container">
             <div class="camping-current-title camping-title">
                 <h5><?php echo $camping_current['camping_current_title']['subtitle'];?></h5>
@@ -165,7 +166,7 @@
     </section>
 
     <section class="camping-flavor">
-        <div class="container">
+        <div class="container" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease">
             <div class="camping-flavor-title camping-title">
                 <h5><?php echo $camping_flavor['camping_flavor_title']['subtitle'];?></h5>
                 <h1 class="title"><?php echo $camping_flavor['camping_flavor_title']['title'];?></h1>
@@ -219,16 +220,16 @@
     <section id="register" class="camping-registration">
         <div class="container">
             <div class="camping-registration-title camping-title">
-                <h5> Trại hè 2024</h5>
-                <h1> Đăng ký </h1>
+                <h5><?php echo $camping_registration['camping_registration_title']['subtitle'];?></h5>
+                <h1> <?php echo $camping_registration['camping_registration_title']['title'];?> </h1>
             </div>
             <div class="camping-registration-content">
                 <div class="register-form">
-                    <h2>ĐĂNG KÝ TRẢI NGHIỆM TRẠI HÈ</h2>
+                    <h2><?php echo $camping_registration['camping_registration_content']['form_title'];?></h2>
                     <?php echo do_shortcode('[custom_registration_form]'); ?>
                 </div>
                 <div class="register-image">
-                    <img src="<?php echo theme_uri()?>/assets/images/course-01.jpg" alt="Group of children enjoying a class">
+                    <img src="<?php echo $camping_registration['camping_registration_content']['form_image'];?>" alt="Group of children enjoying a class">
                 </div>
             </div>
         </div>
@@ -239,7 +240,7 @@
             <div class="container">
                 <div class="thanks-content camping-title">
                     <div data-aos="fade-up"
-                    data-aos-duration="2000"">
+                    data-aos-duration="1000"">
                     <h5><?php echo $thanks['subtitle'];?></h5>
                     <h1><?php echo $thanks['title'];?></h1>
                     <p>

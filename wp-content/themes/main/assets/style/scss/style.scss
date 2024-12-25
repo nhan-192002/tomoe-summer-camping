@@ -56,11 +56,11 @@ a:hover{
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 6px;
-    font-size: 18px;
+    font-size: $fs_subtitle_large;
     margin-bottom: 30px;
   }
   h1{
-    font-size: 64px;
+    font-size: $fs_title_large;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 6px;
@@ -72,7 +72,7 @@ a:hover{
 .navigation{
   position: fixed;
   width: 100%;
-  //top: 0;
+  top: 0;
   z-index: 11;
   background-color: $green;
   transition: transform 0.3s ease-in-out;
@@ -612,7 +612,7 @@ a:hover{
     .thanks-content{
       text-align: center;
       color: $green;
-      max-width: 900px;
+      max-width: 1200px;
       position: absolute;
       top: 50%;
       left: 50%;

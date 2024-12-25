@@ -56,6 +56,7 @@ a:hover {
 .navigation {
   position: fixed;
   width: 100%;
+  top: 0;
   z-index: 11;
   background-color: rgb(77, 91, 42);
   -webkit-transition: -webkit-transform 0.3s ease-in-out;
@@ -641,7 +642,7 @@ a:hover {
 .thanks .thanks-img .thanks-content {
   text-align: center;
   color: rgb(77, 91, 42);
-  max-width: 900px;
+  max-width: 1200px;
   position: absolute;
   top: 50%;
   left: 50%;

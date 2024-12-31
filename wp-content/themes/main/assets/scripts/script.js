@@ -36,15 +36,22 @@ $(document).ready(function() {
 
     function autoMoveImages() {
         const maxScroll = $imageList[0].scrollWidth - $(window).width();
-        scrollAmount += scrollSpeed * scrollDirection;
 
-        if (scrollAmount >= maxScroll || scrollAmount <= 0) {
-            scrollDirection *= -1;
+        if (maxScroll > 0) {
+            scrollAmount += scrollSpeed * scrollDirection;
+
+            if (scrollAmount >= maxScroll || scrollAmount <= 0) {
+                scrollDirection *= -1;
+            }
+
+            $imageList.css("transform", `translateX(-${scrollAmount}px)`);
+        } else {
+            $imageList.css("transform", "translateX(0)");
         }
-        $imageList.css("transform", `translateX(-${scrollAmount}px)`);
 
-        requestAnimationFrame(autoMoveImages); // Keep animating
+        requestAnimationFrame(autoMoveImages);
     }
+
     autoMoveImages();
 
     // Disable right-click and F12 developer tools

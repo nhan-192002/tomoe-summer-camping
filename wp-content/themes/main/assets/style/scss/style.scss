@@ -16,6 +16,10 @@ $fs_title_small: 32px;
 $fs_subtitle_small: 14px;
 $fs_text: 18px;
 
+html{
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
 body{
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -35,7 +39,6 @@ a:hover{
 .header-mobile{
   display: none;
 }
-
 .container{
   overflow: hidden;
   width: 100%;
@@ -148,7 +151,7 @@ a:hover{
   .banner-wrap {
     position: absolute;
     top: 200px;
-    left: 250px;
+    left: 200px;
     img{
       max-width: 300px;
     }
@@ -258,6 +261,7 @@ a:hover{
         letter-spacing: 3px;
         color: $green;
         margin-bottom: 30px;
+        text-align: justify;
       }
     }
   }
@@ -271,6 +275,7 @@ a:hover{
         line-height: 1.4;
         letter-spacing: 3px;
         color: $green;
+        text-align: justify;
       }
     }
     .right{
@@ -460,6 +465,7 @@ a:hover{
           color: $green;
           font-weight: 400;
           letter-spacing: 3px;
+          text-align: justify;
         }
       }
     }
@@ -496,6 +502,7 @@ a:hover{
         letter-spacing: 3px;
         font-weight: 400;
         line-height: 1.4;
+        text-align: justify;
       }
         .contact-info{
           margin: 30px 0;
@@ -603,9 +610,9 @@ a:hover{
   margin-top: 50px;
   .thanks-img{
     position: relative;
-    bottom: 48px;
+    //bottom: 48px;
     width: 100%;
-    height: 800px;
+    height: 100vh;
     overflow: hidden;
     background-size: cover;
     background-position: center;

@@ -190,7 +190,7 @@
         </div>
     </section>
 
-    <section class="promo-section background-scroll" style="background-image: url('<?php echo theme_uri()?>/assets/images/promo-2.jpg');">
+    <section class="promo-section background-scroll" style="background-image: url('<?php echo $promo_bot?>');">
     </section>
 
     <section id="contact" class="camping-contact">
@@ -207,7 +207,7 @@
                     </p>
                     <div class="contact-info">
                         <p><a href="tel:0911866511"><i class="fa fa-phone text-white" aria-hidden="true"></i> <?php echo $camping_contact['phone'];?></a></p>
-                        <p><a href="us@congcaphe.com"><i class="fa fa-envelope-o text-white" aria-hidden="true"></i> <?php echo $camping_contact['email'];?></a></p>
+                        <p><a href="mailto:us@congcaphe.com"><i class="fa fa-envelope-o text-white" aria-hidden="true"></i> <?php echo $camping_contact['email'];?></a></p>
                     </div>
                     <div class="register-btn">
                         <a href="#">Đăng ký ngay</a>

@@ -463,7 +463,7 @@ $fs_text: 18px;
     .camping-registration-content {
       flex-direction: column;
       text-align: center;
-      padding: 30px;
+      padding: 15px;
       .register-image{
         display: none;
       }
@@ -475,6 +475,11 @@ $fs_text: 18px;
 
   // Thanks
   .thanks{
+    .thanks-img{
+      .thanks-content{
+        width: 90%;
+      }
+    }
   }
 }
 

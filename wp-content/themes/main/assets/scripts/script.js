@@ -1,13 +1,13 @@
 $(document).ready(function() {
     //Navigation
     const navigation = $('.navigation');
-    var headerHeight = navigation.outerHeight();
+    //var headerHeight = navigation.outerHeight();
 
     const menuIcon = $('.navigation-left-mobile');
     const closeMenu = $('.navigation-right-mobile');
 
     const headerMobile = $('.header-mobile');
-    var headerHeightMobile = headerMobile.outerHeight();
+    //var headerHeightMobile = headerMobile.outerHeight();
     
     const navigationMobile = $('.navigation-mobile');
 
@@ -33,10 +33,17 @@ $(document).ready(function() {
     let scrollAmount = 0;
     const scrollSpeed = 1;
     let scrollDirection = 1;
+    let maxScroll = 0;
 
+    function updateMaxScroll() {
+        maxScroll = $imageList[0].scrollWidth - $(window).width();
+        if (maxScroll < 0) {
+            maxScroll = 0;
+        }
+    }
+
+// Auto-move images
     function autoMoveImages() {
-        const maxScroll = $imageList[0].scrollWidth - $(window).width();
-
         if (maxScroll > 0) {
             scrollAmount += scrollSpeed * scrollDirection;
 
@@ -48,11 +55,29 @@ $(document).ready(function() {
         } else {
             $imageList.css("transform", "translateX(0)");
         }
-
         requestAnimationFrame(autoMoveImages);
     }
+// Update maxScroll on window resize
+    $(window).on("resize", updateMaxScroll);
 
-    autoMoveImages();
+    $(document).ready(() => {
+        updateMaxScroll();
+        autoMoveImages();
+    });
+
+    // Hide and show Navigation when to scroll
+    let lastScrollPosition = 0;
+    const $navigationMenu = $('.navigation');
+
+    $(window).on('scroll', function () {
+        const currentScrollPosition = $(this).scrollTop();
+        if (currentScrollPosition > lastScrollPosition){
+            $navigationMenu.addClass('hidden');
+        }else{
+            $navigationMenu.removeClass('hidden');
+        }
+        lastScrollPosition = currentScrollPosition;
+    });
 
     // Disable right-click and F12 developer tools
     $(document).on('contextmenu', function (e) {

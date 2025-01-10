@@ -372,6 +372,8 @@ a:hover {
   width: 48%;
 }
 .camping-current .camping-current-list .camping-current-item .item-image img {
+  -webkit-box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.3);
+          box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.3);
   max-width: 650px;
 }
 .camping-current .camping-current-list .camping-current-item .item-content .item-content-top {

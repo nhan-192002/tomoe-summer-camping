@@ -23,7 +23,7 @@
         <div class="navigation-wrap">
             <div class="navigation-left">
                 <div class="logo">
-                    <a href="#">
+                    <a href="<?php echo home_url();?>">
                         <img src="<?php echo $logo;?>" alt="Tomoe English House Logo">
                     </a>
                 </div>

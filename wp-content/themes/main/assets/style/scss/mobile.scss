@@ -5,7 +5,7 @@ $greyish: #979797;
 $darkBlack: #000;
 $grayMedium: #757575;
 $blue: #3f99bb;
-$green: rgb(77, 91, 42);
+$green: #0D4734;
 $red-btn: rgb(181, 25, 31);
 
 $fs_title_large: 64px;
@@ -463,7 +463,7 @@ $fs_text: 18px;
     .camping-registration-content {
       flex-direction: column;
       text-align: center;
-      padding: 15px;
+      padding: 30px;
       .register-image{
         display: none;
       }
@@ -475,11 +475,6 @@ $fs_text: 18px;
 
   // Thanks
   .thanks{
-    .thanks-img{
-      .thanks-content{
-        width: 90%;
-      }
-    }
   }
 }
 

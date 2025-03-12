@@ -1,4 +1,5 @@
 <?php
+    $cta = get_field('cta', get_the_ID());
     $camping_banner = get_field('camping_banner', get_the_ID());
     $camping_info = get_field('camping_information', get_the_ID());
     $camping_gallery = get_field('camping_gallery', get_the_ID());
@@ -10,13 +11,19 @@
     $camping_contact = get_field('camping_contact', get_the_ID());
     $camping_registration = get_field('camping_registration', get_the_ID());
     $thanks = get_field('thanks', get_the_ID());
+    $summer_camp_before = get_field('summer_camp_before', get_the_ID());
+    $feedback = get_field('feedback', get_the_ID());
 ?>
 
 <?php get_header();?>
 
     <section class="banner" style="background-image: url('<?php echo $camping_banner['banner_image'];?>');">
         <div class="container banner-wrap" data-aos="fade-down" data-aos-duration="2000">
-            <img src="<?php echo $camping_banner['animated_banner'];?>">
+            <h1 class="outline-text"><?= $cta['title']; ?></h1>
+            <p class="outline-content"><?= $cta['description']; ?></p>
+            <div class="register-btn">
+                <a href="#register">Đăng ký ngay</a>
+            </div>
         </div>
     </section>
 
@@ -63,7 +70,7 @@
                     switch ($layout['acf_fc_layout']):
                         case 'content_top':?>
                             <div class="camping-memories-center">
-                                <div class="left" data-aos="fade-right" data-aos-duration="2000">
+                                <div class="left my-auto" data-aos="fade-right" data-aos-duration="2000">
                                     <img src="<?php echo $layout['image_left'];?>">
                                 </div>
                                 <div class="right">
@@ -82,7 +89,7 @@
                                         <?php echo $layout['text_left'];?>
                                     </p>
                                 </div>
-                                <div class="right" data-aos="fade-left" data-aos-duration="2000">
+                                <div class="right my-auto" data-aos="fade-left" data-aos-duration="2000">
                                     <img src="<?php echo $layout['image_right'];?>">
                                 </div>
                             </div>
@@ -123,11 +130,6 @@
                                             <div class="item-content-center">
                                                 <p><?php echo $layout['text_content'];?></p>
                                             </div>
-                                            <div class="item-content-bot">
-                                                <div class="register-btn">
-                                                    <a href="#">Đăng ký ngay</a>
-                                                </div>
-                                            </div>
                                             <div class="line">
                                                 <b></b>
                                             </div>
@@ -143,11 +145,6 @@
                                             </div>
                                             <div class="item-content-center">
                                                 <p><?php echo $layout['text_content'];?></p>
-                                            </div>
-                                            <div class="item-content-bot">
-                                                <div class="register-btn">
-                                                    <a href="#">Đăng ký ngay</a>
-                                                </div>
                                             </div>
                                             <div class="line">
                                                 <b></b>
@@ -179,7 +176,7 @@
                     foreach ($camping_flavor['camping_flavor_content'] as $item):?>
                         <div class="camping-flavor-item">
                             <img src="<?php echo $item['content_image'];?>" alt="<?php echo $item['content_title'];?>" class="flavor-image">
-                            <div class="flavor-content">
+                            <div class="flavor-content mt-3">
                                 <h2><?php echo $item['content_title'];?></h2>
                                 <p><?php echo $item['content_description'];?></p>
                             </div>
@@ -195,7 +192,7 @@
 
     <section id="contact" class="camping-contact">
         <div class="container">
-            <div class="camping-contact-group">
+            <div class="camping-contact-group p-3">
                 <div class="contact-image">
                     <img class="image" src="<?php echo $camping_contact['image'];?>">
                 </div>
@@ -207,11 +204,11 @@
                     </p>
                     <div class="contact-info">
                         <p><a href="tel:0911866511"><i class="fa fa-phone text-white" aria-hidden="true"></i> <?php echo $camping_contact['phone'];?></a></p>
-                        <p><a href="mailto:us@congcaphe.com"><i class="fa fa-envelope-o text-white" aria-hidden="true"></i> <?php echo $camping_contact['email'];?></a></p>
+                        <p><a href="us@congcaphe.com"><i class="fa fa-envelope-o text-white" aria-hidden="true"></i> <?php echo $camping_contact['email'];?></a></p>
                     </div>
-                    <div class="register-btn">
-                        <a href="#">Đăng ký ngay</a>
-                    </div>
+<!--                    <div class="register-btn">-->
+<!--                        <a href="#register">Đăng ký ngay</a>-->
+<!--                    </div>-->
                 </div>
             </div>
         </div>
@@ -234,6 +231,87 @@
             </div>
         </div>
     </section>
+<section class="camping-part">
+    <div class="container mt-5">
+        <h2 class="camping-part-title text-center"><?= $summer_camp_before['title']?></h2>
+
+        <div class="d-flex flex-column justify-content-center align-items-center">
+            <!-- Tabs -->
+            <ul class="nav nav-tabs mt-4" id="campTabs" role="tablist">
+                <?php foreach ($summer_camp_before['summer_camp_before_item'] as $index => $item) { ?>
+                    <li class="nav-item">
+                        <button class="camping-part-nav-link nav-link <?= $index === 0 ? 'active' : '' ?>"
+                                id="year<?= $index ?>-tab"
+                                data-bs-toggle="tab"
+                                data-bs-target="#year<?= $index ?>"
+                                type="button" role="tab">
+                            <?= $item['title']; ?>
+                        </button>
+                    </li>
+                <?php } ?>
+            </ul>
+            <div class="tab-content mt-3" id="campTabsContent">
+                <?php foreach ($summer_camp_before['summer_camp_before_item'] as $index => $item) { ?>
+                    <div class="tab-pane fade <?= $index === 0 ? 'show active' : '' ?>" id="year<?= $index?>" role="tabpanel">
+                        <div class="d-flex justify-content-center align-items-center mb-5">
+                            <p><?= $item['description']; ?></p>
+                        </div>
+                        <div class="row">
+                            <?php foreach ($item['gallery'] as $img): ?>
+                                <div class="col-md-4 mb-5">
+                                    <img src="<?php echo esc_url($img['url']); ?>" alt="<?php echo esc_attr($img['alt']); ?>">
+                                </div>
+                            <?php endforeach; ?>
+                        </div>
+                    </div>
+                <?php } ?>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="feedback">
+    <div class="container my-5">
+        <h2 class="feedback-title text-center mb-4"><?= $feedback['title']?></h2>
+        <p class="feedback-description text-center text-muted mb-5">
+            <?= $feedback['description']?>
+        </p>
+
+        <div id="feedbackCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <?php foreach ($feedback['item'] as $index => $item){?>
+                    <div class="carousel-item <?= $index == 0 ? 'active' : '' ?>">
+                    <div class="card shadow p-4">
+                        <h5 class="fw-bold feedback-content"><?= $item['title']; ?></h5>
+                        <p class="text-muted feedback-content"><?= $item['parent']; ?>:</p>
+                        <p class="feedback-content">
+                            <?= $item['content']; ?>
+                        </p>
+                    </div>
+                </div>
+                <?php } ?>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#feedbackCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Trước</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#feedbackCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Tiếp theo</span>
+            </button>
+
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#feedbackCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
+                <button type="button" data-bs-target="#feedbackCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#feedbackCarousel" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#feedbackCarousel" data-bs-slide-to="3"></button>
+                <button type="button" data-bs-target="#feedbackCarousel" data-bs-slide-to="4"></button>
+            </div>
+        </div>
+    </div>
+</section>
+
 
     <section class="thanks">
         <div class="thanks-img" style="background-image: url('<?php echo $thanks['bg_image'];?>');">
@@ -247,6 +325,7 @@
                         <?php echo $thanks['description'];?>
                     </p>
                 </div>
+
                 </div>
             </div>
         </div>

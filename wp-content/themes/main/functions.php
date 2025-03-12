@@ -72,46 +72,6 @@ function crf_start_session() {
 }
 add_action( 'init', 'crf_start_session', 1 );
 
-// Handle form submission.
-function crf_handle_form_submission() {
-    if ( isset( $_POST['crf_submit'] ) ) {
-        global $wpdb;
-
-        if ( !session_id() ) {
-            session_start();
-        }
-
-        // Sanitize user input.
-        $name   = sanitize_text_field( $_POST['name'] );
-        $age    = intval( $_POST['age'] );
-        $email  = sanitize_email( $_POST['email'] );
-        $phone  = sanitize_text_field( $_POST['phone'] );
-
-        // Insert data into the custom table.
-        $table_name = $wpdb->prefix . 'custom_registration';
-        $wpdb->insert(
-            $table_name,
-            [
-                'name'   => $name,
-                'age'    => $age,
-                'email'  => $email,
-                'phone'  => $phone,
-            ],
-            [
-                '%s',
-                '%d',
-                '%s',
-                '%s',
-            ]
-        );
-
-        $_SESSION['crf_success_message'] = 'Đăng ký thành công!';
-        wp_redirect( home_url('/#register') );
-        exit();
-    }
-}
-add_action( 'init', 'crf_handle_form_submission' );
-
 function crf_register_form_shortcode() {
     if ( !session_id() ) {
         session_start();
@@ -124,13 +84,16 @@ function crf_register_form_shortcode() {
         // Optionally, you can clear the message after displaying it once.
         unset( $_SESSION['crf_success_message'] );
     }
+
+    $nonce = wp_create_nonce('crf_register_action');
     ?>
 
     <form action="<?php echo esc_url( $_SERVER['REQUEST_URI'] ); ?>" method="post" id="crf-registration-form">
-        <input type="text" name="name" placeholder="Họ và tên" required>
-        <input type="number" name="age" placeholder="Tuổi của bé" required>
+        <input type="hidden" name="crf_nonce" value="<?php echo $nonce; ?>">
+        <input type="text" required name="fullname" placeholder="Họ và tên" required>
+        <input type="number" required name="age" placeholder="Tuổi của bé" required>
         <input type="email" name="email" placeholder="Email" required>
-        <input type="tel" name="phone" placeholder="Số điện thoại" required>
+        <input type="tel" required name="phone" placeholder="Số điện thoại" required>
         <input type="submit" name="crf_submit" value="Gửi">
     </form>
     <?php
@@ -138,4 +101,68 @@ function crf_register_form_shortcode() {
 }
 add_shortcode( 'custom_registration_form', 'crf_register_form_shortcode' );
 
+function crf_handle_form_submission() {
+    if ( isset( $_POST['crf_submit'] ) ) {
+        if ( !session_id() ) {
+            session_start();
+        }
 
+        if ( !isset( $_POST['crf_nonce'] ) || !wp_verify_nonce( $_POST['crf_nonce'], 'crf_register_action' ) ) {
+            $_SESSION['crf_success_message'] = 'Xác thực thất bại!';
+            return;
+        }
+
+        if ( !empty( $_POST['honeypot'] ) ) {
+            $_SESSION['crf_success_message'] = 'Có dấu hiệu spam!';
+            return;
+        }
+
+        $current_time = time();
+        if ( isset($_SESSION['last_submit_time']) && ($current_time - $_SESSION['last_submit_time']) < 10 ) {
+            $_SESSION['crf_success_message'] = 'Bạn đang gửi quá nhanh, vui lòng chờ!';
+            return;
+        }
+        $_SESSION['last_submit_time'] = $current_time;
+
+        // ✅ Lấy dữ liệu từ form
+        $name  = sanitize_text_field( $_POST['fullname'] );
+        $age   = intval( $_POST['age'] );
+        $email = sanitize_email( $_POST['email'] );
+        $phone = sanitize_text_field( $_POST['phone'] );
+
+        if ( empty( $name ) || empty( $age ) || empty( $email ) || empty( $phone ) ) {
+            $_SESSION['crf_success_message'] = 'Vui lòng nhập đầy đủ thông tin!';
+            return;
+        }
+
+        if ( !filter_var( $email, FILTER_VALIDATE_EMAIL ) ) {
+            $_SESSION['crf_success_message'] = 'Email không hợp lệ!';
+            return;
+        }
+
+        // 📝 Tạo bài post
+        $post_data = array(
+            'post_title'   => 'Có một đăng ký trại hè mới từ người dùng có tên '.$name,
+            'post_status'  => 'private',
+            'post_type'    => 'post',
+        );
+
+        $post_id = wp_insert_post( $post_data );
+
+        if ( $post_id ) {
+            update_field( 'fullname', $name, $post_id );
+            update_field( 'age', $age, $post_id );
+            update_field( 'email', $email, $post_id );
+            update_field( 'phone', $phone, $post_id );
+
+            $_SESSION['crf_success_message'] = 'Đăng ký thành công!';
+        } else {
+            $_SESSION['crf_success_message'] = 'Đăng ký thất bại!';
+        }
+
+        // 🔄 Redirect để tránh gửi lại form khi F5
+        wp_redirect( esc_url( $_SERVER['REQUEST_URI'] ) );
+        exit;
+    }
+}
+add_action( 'init', 'crf_handle_form_submission' );
